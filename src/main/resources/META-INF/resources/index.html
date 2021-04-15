@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Temporal - Patient Onboarding Demo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/wingcss/0.1.8/wing.min.css"/>
+    <!-- Load AngularJS -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script type="text/javascript">
+
+        var app = angular.module("NewPatientOnboarding", []);
+
+        app.controller("NewPatientOnboardingController", function ($scope, $http) {
+
+            $scope.onboardedpatients = [];
+
+            $scope.form = {
+                name: "",
+                age: "",
+                zip: "",
+                condition: ""
+            };
+
+            // Invoke workflow execution
+            $scope.add = function () {
+                let newpatientdata = {
+                    "name": $scope.form.name,
+                    "age": $scope.form.age,
+                    "zip": $scope.form.zip,
+                    "insurance": " ",
+                    "insuranceId": " ",
+                    "condition": $scope.form.condition
+                };
+
+                $http({
+                    method: "POST",
+                    url: '/onboard',
+                    data: newpatientdata,
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    }
+                }).then(_success, _error);
+            };
+
+            function _success(response) {
+                $scope.onboardedpatients.push(response.data);
+                _clearForm();
+            }
+
+            function _error(response) {
+                alert(response.statusText);
+            }
+
+            function _clearForm() {
+                $scope.form.name = "";
+                $scope.form.age = "";
+                $scope.form.zip = "";
+                $scope.form.condition = "";
+            }
+        });
+    </script>
+</head>
+<body ng-app="NewPatientOnboarding" ng-controller="NewPatientOnboardingController">
+
+<div class="container">
+    <br/>
+    <img src="https://temporal.io/press/favicon.png" width="10%">
+    <h1>Temporal Demo: New Patient Onboarding</h1>
+    <br/>
+    <h3>Enter new patient info:</h3>
+    <form ng-submit="add()">
+        <div class="row">
+            <div class="col-4"><input type="text" placeholder="Name" ng-model="form.name" size="30"/></div>
+        </div>
+        <div class="row">
+            <div class="col-4"><input type="text" placeholder="Age" ng-model="form.age" size="30"/></div>
+        </div>
+        <div class="row">
+            <div class="col-4"><input type="text" placeholder="Zip" ng-model="form.zip" size="30"/></div>
+        </div>
+        <div class="row">
+            <div class="col-4"><input type="text" placeholder="Condition" ng-model="form.condition" size="30"/></div>
+        </div>
+        <input type="submit" value="Onboard patient"/>
+    </form>
+    <br/>
+    <h3>Onboarded Patients</h3>
+    <table style="width:100%">
+        <tr>
+            <th align="left"><b>Name</b></th>
+            <th align="left"><b>Age</b></th>
+            <th align="left"><b>Zip</b></th>
+            <th align="left"><b>Condition</b></th>
+            <th align="left"><b>Assigned to Hospital</b></th>
+            <th align="left"><b>Assigned to Doctor</b></th>
+        </tr>
+        <tr ng-repeat="op in onboardedpatients">
+            <td>{{ op.name }}</td>
+            <td>{{ op.age }}</td>
+            <td>{{ op.zip }}</td>
+            <td>{{ op.condition }}</td>
+            <td>{{ op.hospital.name }}</td>
+            <td>{{ op.doctor.name }}</td>
+        </tr>
+    </table>
+</div>
+
+<script lang="javascript">
+
+    var lastmessage = "";
+    updateMessage = function() {
+        fetch('messages-collector').then(response => response.text()).then(message => {
+            if(message == lastmessage) {
+                // nothing....
+            } else {
+                lastmessage = message;
+                toShowMessage = message.replace(/message=/g,'');
+                toShowMessage = decodeURIComponent((toShowMessage + '').replace(/\+/g, '%20'));
+                swal({
+                    title: toShowMessage,
+                    text: "",
+                    icon: "success",
+                    timer: 2000
+                });
+            }
+            }
+        );
+    };
+    window.setInterval(updateMessage, 1000);
+</script>
+</body>
+</html>
