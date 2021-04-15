@@ -48,6 +48,14 @@
             };
 
             function _success(response) {
+                if(response.data.onboarded == "no") {
+                    swal({
+                        title: "Unable to onboard patient",
+                        text: "",
+                        icon: "error",
+                        timer: 3000
+                    });
+                }
                 $scope.onboardedpatients.push(response.data);
                 _clearForm();
             }
@@ -98,6 +106,7 @@
             <th align="left"><b>Condition</b></th>
             <th align="left"><b>Assigned to Hospital</b></th>
             <th align="left"><b>Assigned to Doctor</b></th>
+            <th align="left"><b>Onboarded</b></th>
         </tr>
         <tr ng-repeat="op in onboardedpatients">
             <td>{{ op.name }}</td>
@@ -106,6 +115,7 @@
             <td>{{ op.condition }}</td>
             <td>{{ op.hospital.name }}</td>
             <td>{{ op.doctor.name }}</td>
+            <td>{{ op.onboarded }}</td>
         </tr>
     </table>
 </div>
@@ -114,8 +124,8 @@
 
     var lastmessage = "";
     updateMessage = function() {
-        fetch('messages-collector').then(response => response.text()).then(message => {
-            if(message == lastmessage) {
+        fetch('http://localhost:8081/messages-collector').then(response => response.text()).then(message => {
+            if(message == lastmessage || message.trim() === "") {
                 // nothing....
             } else {
                 lastmessage = message;

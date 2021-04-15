@@ -9,6 +9,7 @@ public class Patient {
     private String condition;
     private Hospital hospital;
     private Doctor doctor;
+    private String onboarded;
 
     public Patient() {}
 
@@ -83,6 +84,14 @@ public class Patient {
 
     public void setDoctor(Doctor doctor) {
         this.doctor = doctor;
+    }
+
+    public String getOnboarded() {
+        return onboarded;
+    }
+
+    public void setOnboarded(String onboarded) {
+        this.onboarded = onboarded;
     }
 
     @Override

@@ -60,6 +60,7 @@ public class OnboardingActivitiesImpl implements OnboardingActivities {
         sendMessage("Finalizing patient onboarding: " + patient.getName());
         // simulate some work...
         sleep(2);
+        patient.setOnboarded("yes");
         return patient;
     }
 
@@ -74,7 +75,7 @@ public class OnboardingActivitiesImpl implements OnboardingActivities {
     private void sendMessage(String message) {
         try {
             HttpClient client= new DefaultHttpClient();
-            HttpPost request = new HttpPost("http://localhost:8080/messages");
+            HttpPost request = new HttpPost("http://localhost:8081/messages");
 
             List<NameValuePair> pairs = new ArrayList<>();
             pairs.add(new BasicNameValuePair("message", message));
@@ -83,7 +84,7 @@ public class OnboardingActivitiesImpl implements OnboardingActivities {
             client.execute(request);
         } catch (IOException e) {
             System.out.println("Unable to send message from activity");
-            e.printStackTrace();
+            throw new IllegalStateException(e.getMessage());
         }
     }
 }
