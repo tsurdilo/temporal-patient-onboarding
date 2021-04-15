@@ -61,7 +61,17 @@ Once you fill in the new patient form click the "Onboard Patient" button.
 
 This will start our workflow run which is associated with the new patient that we are onboarding.
 
-The workflow is going to execute a number of activities one after another (pipeline).
+Here is how we can visualize our workflow:
+
+<p align="center">
+<img src="img/workflow-overview.png" height="200"/>
+</p>
+
+It is basically a pipeline which executes each of our onboarding activities one after
+the other. 
+
+
+
 When each activity executes, you will see a notification popup of the activity, for example:
 
 <p align="center">
