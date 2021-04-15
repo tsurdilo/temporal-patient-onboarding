@@ -55,7 +55,7 @@ mvn clean install quarkus:dev
 
 ## Interacting with the demo
 
-## 1. Running without errors
+## 1. Running without failures
 
 Our demo has a simple UI that intially looks like this:
 
