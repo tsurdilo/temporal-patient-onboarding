@@ -4,22 +4,21 @@ Shows Temporal workflow execution running on [Quarkus](https://quarkus.io/).
 Uses the [Temporal Java SDK](https://github.com/temporalio/sdk-java).
 
 ## About
-In this demo we show off a simple patient onboarding workflow.
-Our workflow is exposed as a service running locally and can be accessed at end-point
-`/onboard`. The application includes an UI which you can use to enter in new patient 
-information and start workflow execution and see live-updates and results of the 
-onboarding process (workflow).
+
+In this demo we show off a patient onboarding workflow.
+It's main purpose is to:
+* Show how to get up and running with Temporal
+* Show how to easily add retry logic to your workflows
+* Show how to easily add compensation logic to your workflows
+
+The demo is composed of two modules:
+1. The `onboarding-app` module is our app that runs the workflow and its activities. It also includes our onboarding UI.
+2. The `onboarding-services` module contains our services which the workflow activities are accessing. It is used to show
+workflow retries and compensation in cases of failures.
 
 ## Running the demo
 
-1. Clone the repository locally:
-
-```shell script
-git clone https://github.com/tsurdilo/temporal-patient-onboarding.git
-cd temporal-patient-onboarding
-```
-
-2. Start the Temporal Service (docker compose): 
+1. Start the Temporal Service (docker compose):
 
 ```shell script
  git clone https://github.com/temporalio/docker-compose.git
@@ -27,9 +26,26 @@ cd temporal-patient-onboarding
  docker-compose up
 ```
 
-3. Start the demo:
+2. Clone the repository locally:
 
 ```shell script
+git clone https://github.com/tsurdilo/temporal-patient-onboarding.git
+cd temporal-patient-onboarding
+```
+
+3. Start the demo apps:
+
+Start `onboarding-services`:
+
+```shell script
+cd onboarding-services
+mvn clean install quarkus:dev
+```
+
+Start `onboarding-app`:
+
+```shell script
+cd onboarding-app
 mvn clean install quarkus:dev
 ```
 
@@ -38,6 +54,8 @@ mvn clean install quarkus:dev
 5. Access the Temporal Web-Ui via: [http://localhost:8088](http://localhost:8088)
 
 ## Interacting with the demo
+
+## 1. Running without errors
 
 Our demo has a simple UI that intially looks like this:
 
@@ -70,8 +88,6 @@ Here is how we can visualize our workflow:
 It is basically a pipeline which executes each of our onboarding activities one after
 the other. 
 
-
-
 When each activity executes, you will see a notification popup of the activity, for example:
 
 <p align="center">
@@ -100,4 +116,30 @@ has successfully completed:
 You can click on the Run Id link and explore the workflow execution history.
 
 
-And that's it. Hope you enjoyed running this demo :) 
+## 2. Seeing the power of Temporal Activity retries
+
+For this scenario shut down `onboarding-services` so it is not running.
+Start onboarding another patient through the UI and submit the form.
+
+Look at the logs of `onboarding-app`, you will see that Temporal is retrying the first activity which is failing
+because of an exception.
+
+After about 5 seconds bring up `onboarding-services` again and watch the UI. 
+You will see that workflow retries were successfull and you will start seeing the onboarding 
+popup messages and that the patient was successfully onboarded.
+
+## 3. Seeing the power of Temporal workflow compensation
+
+For this scenario shut down `onboarding-services` so it is not running. 
+Start onboarding anotehr patient through the UI and submit the form.
+
+This time do not bring `onboarding-services` and wait until our retries finish (we set the max retries to 6 in our workflow).
+Watch the UI, as after all the retries have been performed you will see a notification popul telling you
+that the patient was not onboarded. 
+
+Now look at the logs of `onboarding-app`, you will see that right after the defined retries, our workflow has 
+performed its compensation (in this demo it is just printing out a message, but irl it could be doing much much more).
+
+You will see a "no" in the onboarded patients "Onboarded" table column.
+
+Hope you have fun running this demo! :) 
