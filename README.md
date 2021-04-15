@@ -1,54 +1,89 @@
-# patient-onboarding project
+# Temporal Demo: new patient onboarding
 
-This project uses Quarkus, the Supersonic Subatomic Java Framework.
+Shows Temporal workflow execution running on [Quarkus](https://quarkus.io/).
 
-If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
+## About
+In this demo we show off a simple patient onboarding workflow.
+Our workflow is exposed as a service running locally and can be accessed at end-point
+`/onboard`. The application includes an UI which you can use to enter in new patient 
+information and start workflow execution and see live-updates and results of the 
+onboarding process (workflow).
 
-## Running the application in dev mode
+## Running the demo
 
-You can run your application in dev mode that enables live coding using:
+1. Clone the repository locally:
+
 ```shell script
-./mvnw compile quarkus:dev
+git clone https://github.com/tsurdilo/temporal-patient-onboarding.git
+cd temporal-patient-onboarding
 ```
 
-> **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at http://localhost:8080/q/dev/.
+2. Start the Temporal Service (docker compose): 
 
-## Packaging and running the application
-
-The application can be packaged using:
 ```shell script
-./mvnw package
-```
-It produces the `quarkus-run.jar` file in the `target/quarkus-app/` directory.
-Be aware that it’s not an _über-jar_ as the dependencies are copied into the `target/quarkus-app/lib/` directory.
-
-If you want to build an _über-jar_, execute the following command:
-```shell script
-./mvnw package -Dquarkus.package.type=uber-jar
+ git clone https://github.com/temporalio/docker-compose.git
+ cd  docker-compose
+ docker-compose up
 ```
 
-The application is now runnable using `java -jar target/quarkus-app/quarkus-run.jar`.
+3. Start the demo:
 
-## Creating a native executable
-
-You can create a native executable using: 
 ```shell script
-./mvnw package -Pnative
+mvn clean install quarkus:dev
 ```
 
-Or, if you don't have GraalVM installed, you can run the native executable build in a container using: 
-```shell script
-./mvnw package -Pnative -Dquarkus.native.container-build=true
-```
+4. Access the demo UI in browser via: [http://localhost:8080](http://localhost:8080)
 
-You can then execute your native executable with: `./target/patient-onboarding-1.0.0-SNAPSHOT-runner`
+5. Access the Temporal Web-Ui via: [http://localhost:8088](http://localhost:8088)
 
-If you want to learn more about building native executables, please consult https://quarkus.io/guides/maven-tooling.html.
+## Interacting with the demo
 
-## Provided examples
+Our demo has a simple UI that intially looks like this:
 
-### RESTEasy JAX-RS example
+<p align="center">
+<img src="img/initial-screen.png" height="400px"/>
+</p>
 
-REST is easy peasy with this Hello World RESTEasy resource.
+You can type in the new patient information and here are some useful hints:
 
-[Related guide section...](https://quarkus.io/guides/getting-started#the-jax-rs-resources)
+Our demo workflow activities will associate the zip code you type in with one of the 
+pre-defined hospitals. To get a specific hospital you can use the following zips:
+`30041`, `55902`, `90095`, `90048`, `10065`. You can type in any zip you wish but if it's not one 
+of those our workflow activities will associate it with the "default" hospital.
+
+There is a number of conditions which you can use to associate the patient with 
+one of the pre-defined doctors in the demo. These are:
+`Diabetes`, `Anxiety`, `Cancer`, `Asthma`. you can type in any condition you wish but if it's not one of theose
+the workflow activities will associate it with the "default" doctor.
+
+Once you fill in the new patient form click the "Onboard Patient" button.
+
+This will start our workflow run which is associated with the new patient that we are onboarding.
+
+The workflow is going to execute a number of activities one after another (pipeline).
+When each activity executes, you will see a notification popup of the activity, for example:
+
+<p align="center">
+<img src="img/notifications.png" height="400px"/>
+</p>
+
+These notifications are pushed from our workflow activities.
+
+After the workflow run completes, the section of bottom of the scren will update to show you
+that the patient is indeed onboarded:
+
+<p align="center">
+<img src="img/onboarded.png" height="150px"/>
+</p>
+
+Now let's take a look at our Temporal Web-UI client, it will show us that our workflow execution 
+has successfully completed:
+
+<p align="center">
+<img src="img/workflowruncompletion.png" height="150px"/>
+</p>
+
+You can click on the Run Id link and explore the workflow execution history.
+
+
+And that's it. Hope you enjoyed running this demo :) 
