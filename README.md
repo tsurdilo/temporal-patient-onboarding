@@ -1,6 +1,7 @@
 # Temporal Demo: new patient onboarding
 
 Shows Temporal workflow execution running on [Quarkus](https://quarkus.io/).
+Uses the [Temporal Java SDK](https://github.com/temporalio/sdk-java).
 
 ## About
 In this demo we show off a simple patient onboarding workflow.
