@@ -68,6 +68,9 @@ When each activity executes, you will see a notification popup of the activity, 
 </p>
 
 These notifications are pushed from our workflow activities.
+There is no need to click on the notifications "OK" button. These notifications
+will automatically close when the assiciated workflow activitiy has completed
+and will dissapear when the workflow run completes.
 
 After the workflow run completes, the section of bottom of the scren will update to show you
 that the patient is indeed onboarded:
