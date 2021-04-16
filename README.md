@@ -10,6 +10,7 @@ It's main purpose is to:
 * Show how to get up and running with Temporal
 * Show how to easily add retry logic to your workflows
 * Show how to easily add compensation logic to your workflows
+* Show how you can add resiliency to your applications using Temporal
 
 The demo is composed of two modules:
 1. The `onboarding-app` module is our app that runs the workflow and its activities. It also includes our onboarding UI.
