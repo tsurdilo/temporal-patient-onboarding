@@ -25,7 +25,7 @@ public class OnboardingActivitiesImpl implements OnboardingActivities {
     public Patient storeNewPatient(Patient patient) {
         sendMessage("Storing new patient: " + patient.getName());
         // simulate some work...
-        sleep(2);
+        sleep(5);
         return patient;
     }
 
@@ -33,7 +33,7 @@ public class OnboardingActivitiesImpl implements OnboardingActivities {
     public Patient assignHospitalToPatient(Patient patient) {
         sendMessage("Assigning hospital to patient: " + patient.getName());
         // simulate some work...
-        sleep(2);
+        sleep(5);
         Hospital hospital = hospitalList.stream().filter(h -> h.getZip().equals(patient.getZip()))
                 .findFirst()
                 .orElse(new Hospital("Local Hospital","123 Local Street", "555-55-5555", "12345"));
@@ -46,7 +46,7 @@ public class OnboardingActivitiesImpl implements OnboardingActivities {
     public Patient assignDoctorToPatient(Patient patient) {
         sendMessage("Assigning doctor to patient: " + patient.getName());
         // simulate some work...
-        sleep(2);
+        sleep(5);
         Doctor doctor = doctorList.stream().filter(d -> d.getSpecialty().equals(patient.getCondition()))
                 .findFirst()
                 .orElse(new Doctor("Michael Scott", "img/docfemale.png", "General"));
@@ -59,7 +59,7 @@ public class OnboardingActivitiesImpl implements OnboardingActivities {
     public Patient finishOnboarding(Patient patient) {
         sendMessage("Finalizing patient onboarding: " + patient.getName());
         // simulate some work...
-        sleep(2);
+        sleep(5);
         patient.setOnboarded("yes");
         return patient;
     }
