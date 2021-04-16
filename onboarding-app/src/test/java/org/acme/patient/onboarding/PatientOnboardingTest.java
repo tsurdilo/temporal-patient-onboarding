@@ -50,9 +50,7 @@ public class PatientOnboardingTest {
         when(activities.finishOnboarding(any())).thenReturn(onboardedPatient);
         worker.registerActivitiesImplementations(activities);
 
-
         testEnv.start();
-
 
         OnboardingWorkflow workflow =
                 client.newWorkflowStub(
