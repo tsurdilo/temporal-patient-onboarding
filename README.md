@@ -117,7 +117,7 @@ has successfully completed:
 You can click on the Run Id link and explore the workflow execution history.
 
 
-## 2. Seeing the power of Temporal Activity retries
+## 2. Simulating Service failure - Retries
 
 For this scenario shut down `onboarding-services` so it is not running.
 Start onboarding another patient through the UI and submit the form.
@@ -129,10 +129,10 @@ After about 5 seconds bring up `onboarding-services` again and watch the UI.
 You will see that workflow retries were successfull and you will start seeing the onboarding 
 popup messages and that the patient was successfully onboarded.
 
-## 3. Seeing the power of Temporal workflow compensation
+## 3. Simulating Service failure - Compensation
 
 For this scenario shut down `onboarding-services` so it is not running. 
-Start onboarding anotehr patient through the UI and submit the form.
+Start onboarding another patient through the UI and submit the form.
 
 This time do not bring `onboarding-services` and wait until our retries finish (we set the max retries to 6 in our workflow).
 Watch the UI, as after all the retries have been performed you will see a notification popul telling you
@@ -142,5 +142,23 @@ Now look at the logs of `onboarding-app`, you will see that right after the defi
 performed its compensation (in this demo it is just printing out a message, but irl it could be doing much much more).
 
 You will see a "no" in the onboarded patients "Onboarded" table column.
+
+## 3. Simulating Temporal workflow replay
+
+For this scenario make sure our app and services are running.
+Start onboarding another patient through the UI and submit the form.
+Shortly after, before the workflow completes, shut down the Temporal service.
+
+You will see that the popup messages on the UI will stop maybe after the first or second
+popup, depending where during the workflow execution you shut down the service.
+
+Now start the Temporal service back up. When it comes back up watch the application UI
+and the Temporal Web UI. You will see that Temporal has recovered our workflow, has replayed it 
+to the point of failure (where we shut down the Temporal service) and is contuing its 
+execution at that point. 
+
+In the Temporal UI you should see that our onboarding workflow is back to the "Running" status
+and that in our application UI the popup messages resume for the remaining activity executions
+and that our patient onboarding finishes.
 
 Hope you have fun running this demo! :) 
