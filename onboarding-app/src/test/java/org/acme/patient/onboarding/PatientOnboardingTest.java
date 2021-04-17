@@ -37,11 +37,12 @@ public class PatientOnboardingTest {
 
     @Test
     public void testMockedPatientOnboarding() {
+        // mock our workflow activities
         OnboardingActivities activities = mock(OnboardingActivities.class);
+
         Patient testPatient = new Patient("Tester", "22", "30041", "", "", "Asthma");
         Patient onboardedPatient = new Patient("Tester", "22", "30041", "", "", "Asthma");
         onboardedPatient.setOnboarded("yes");
-
 
         // mock activity methods
         when(activities.storeNewPatient(any())).thenReturn(testPatient);

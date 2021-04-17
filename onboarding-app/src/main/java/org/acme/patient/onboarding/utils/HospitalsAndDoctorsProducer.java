@@ -3,12 +3,17 @@ package org.acme.patient.onboarding.utils;
 import org.acme.patient.onboarding.model.Doctor;
 import org.acme.patient.onboarding.model.Hospital;
 
+import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.inject.Produces;
 import java.util.ArrayList;
 import java.util.List;
 
+// Producer for some pre-defined hospitals and doctors in our demo app
 public class HospitalsAndDoctorsProducer {
 
-    public static List<Hospital> getParticipatingHospitals() {
+    @Produces
+    @ApplicationScoped
+    public List<Hospital> getParticipatingHospitals() {
         List<Hospital> hospitals = new ArrayList<>();
 
         // some default available hospitals
@@ -18,11 +23,12 @@ public class HospitalsAndDoctorsProducer {
         hospitals.add(new Hospital("Cedars-Sinai Medical Center", "12345 Some Address", "555-55-5555", "90048"));
         hospitals.add(new Hospital("NewYork-Presbyterian Hospital", "12345 Some Address", "555-55-5555", "10065"));
 
-
         return hospitals;
     }
 
-    public static List<Doctor> getParticipatingDoctors() {
+    @Produces
+    @ApplicationScoped
+    public List<Doctor> getParticipatingDoctors() {
         List<Doctor> doctors = new ArrayList<>();
 
         doctors.add(new Doctor("Dr. John Doe", "img/docmale.png", "Diabetes"));

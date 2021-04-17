@@ -3,7 +3,6 @@ package org.acme.patient.onboarding.activities;
 import org.acme.patient.onboarding.model.Doctor;
 import org.acme.patient.onboarding.model.Hospital;
 import org.acme.patient.onboarding.model.Patient;
-import org.acme.patient.onboarding.utils.HospitalsAndDoctorsProducer;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
@@ -17,9 +16,15 @@ import java.util.List;
 
 public class OnboardingActivitiesImpl implements OnboardingActivities {
 
-    List<Hospital> hospitalList = HospitalsAndDoctorsProducer.getParticipatingHospitals();
+    private List<Hospital> hospitals;
+    private List<Doctor> doctors;
 
-    List<Doctor> doctorList = HospitalsAndDoctorsProducer.getParticipatingDoctors();
+    public OnboardingActivitiesImpl() {}
+
+    public OnboardingActivitiesImpl(List<Hospital> hospitals, List<Doctor> doctors) {
+        this.hospitals = hospitals;
+        this.doctors = doctors;
+    }
 
     @Override
     public Patient storeNewPatient(Patient patient) {
@@ -34,7 +39,7 @@ public class OnboardingActivitiesImpl implements OnboardingActivities {
         sendMessage("Assigning hospital to patient: " + patient.getName());
         // simulate some work...
         sleep(5);
-        Hospital hospital = hospitalList.stream().filter(h -> h.getZip().equals(patient.getZip()))
+        Hospital hospital = hospitals.stream().filter(h -> h.getZip().equals(patient.getZip()))
                 .findFirst()
                 .orElse(new Hospital("Local Hospital","123 Local Street", "555-55-5555", "12345"));
         patient.setHospital(hospital);
@@ -47,7 +52,7 @@ public class OnboardingActivitiesImpl implements OnboardingActivities {
         sendMessage("Assigning doctor to patient: " + patient.getName());
         // simulate some work...
         sleep(5);
-        Doctor doctor = doctorList.stream().filter(d -> d.getSpecialty().equals(patient.getCondition()))
+        Doctor doctor = doctors.stream().filter(d -> d.getSpecialty().equals(patient.getCondition()))
                 .findFirst()
                 .orElse(new Doctor("Michael Scott", "img/docfemale.png", "General"));
         patient.setDoctor(doctor);

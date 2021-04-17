@@ -18,14 +18,17 @@ public class OnboardingResource {
     @ConfigProperty(name = "onboarding.task.queue")
     String taskQueue;
 
+    @ConfigProperty(name = "onboarding.id.prefix")
+    String idPrefix;
+
     @POST
     public Patient doOnboard(Patient patient) {
         // start a new workflow execution
-        // use the patient name for the unique workflow id..irl this would be some unique generated id maybe
+        // use the patient name for the unique workflow id
         OnboardingWorkflow workflow =
                 observer.getClient().newWorkflowStub(
                         OnboardingWorkflow.class, WorkflowOptions.newBuilder()
-                                .setWorkflowId("patientonboarding-" + patient.getName().replaceAll(" ", "-").toLowerCase())
+                                .setWorkflowId(idPrefix + patient.getName().replaceAll(" ", "-").toLowerCase())
                                 .setTaskQueue(taskQueue).build());
 
         return workflow.onboardNewPatient(patient);
