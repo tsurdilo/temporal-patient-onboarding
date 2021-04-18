@@ -12,10 +12,11 @@ It's main purpose is to:
 * Show how to easily add compensation logic to your workflows
 * Show how you can add resiliency to your applications using Temporal
 
-The demo is composed of two modules:
+The demo is composed of three modules:
 1. The `onboarding-app` module is our app that runs the workflow and its activities. It also includes our onboarding UI.
 2. The `onboarding-services` module contains our services which the workflow activities are accessing. It is used to show
 workflow retries and compensation in cases of failures.
+3. The `onboarding-model` contains our domain model
 
 ## Running the demo
 

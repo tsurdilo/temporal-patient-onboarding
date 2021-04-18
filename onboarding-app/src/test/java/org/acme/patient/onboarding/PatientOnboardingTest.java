@@ -10,9 +10,13 @@ import io.temporal.testing.TestWorkflowEnvironment;
 import io.temporal.worker.Worker;
 import org.acme.patient.onboarding.activities.OnboardingActivities;
 import org.acme.patient.onboarding.model.Patient;
+import org.acme.patient.onboarding.utils.OnboardingServiceClient;
 import org.acme.patient.onboarding.wokflow.OnboardingWorkflow;
 import org.acme.patient.onboarding.wokflow.OnboardingWorkflowImpl;
+import org.eclipse.microprofile.rest.client.inject.RestClient;
 import org.junit.jupiter.api.*;
+
+import javax.inject.Inject;
 
 public class PatientOnboardingTest {
 
@@ -20,6 +24,11 @@ public class PatientOnboardingTest {
     private static Worker worker;
     private static WorkflowClient client;
     private static String taskQueue = "TestOnboardingTaskQueue";
+
+    @Inject
+    @RestClient
+    OnboardingServiceClient serviceClient;
+
 
     @BeforeAll
     public static void setUp() {
@@ -48,7 +57,7 @@ public class PatientOnboardingTest {
         when(activities.storeNewPatient(any())).thenReturn(testPatient);
         when(activities.assignHospitalToPatient(any())).thenReturn(testPatient);
         when(activities.assignDoctorToPatient(any())).thenReturn(testPatient);
-        when(activities.finishOnboarding(any())).thenReturn(onboardedPatient);
+        when(activities.finalizeOnboarding(any())).thenReturn(onboardedPatient);
         worker.registerActivitiesImplementations(activities);
 
         testEnv.start();
@@ -67,5 +76,6 @@ public class PatientOnboardingTest {
         Assertions.assertEquals("Tester", resultPatient.getName());
         Assertions.assertEquals("yes", resultPatient.getOnboarded());
     }
+
 
 }

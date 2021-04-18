@@ -8,7 +8,7 @@ import javax.enterprise.inject.Produces;
 import java.util.ArrayList;
 import java.util.List;
 
-// Producer for some pre-defined hospitals and doctors in our demo app
+@ApplicationScoped
 public class HospitalsAndDoctorsProducer {
 
     @Produces

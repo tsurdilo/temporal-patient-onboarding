@@ -8,5 +8,5 @@ public interface OnboardingActivities {
     Patient storeNewPatient(Patient patient);
     Patient assignHospitalToPatient(Patient patient);
     Patient assignDoctorToPatient(Patient patient);
-    Patient finishOnboarding(Patient patient);
+    Patient finalizeOnboarding(Patient patient);
 }

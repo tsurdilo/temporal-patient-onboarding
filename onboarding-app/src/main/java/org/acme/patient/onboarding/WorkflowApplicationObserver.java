@@ -9,9 +9,10 @@ import io.temporal.worker.WorkerFactory;
 import org.acme.patient.onboarding.activities.OnboardingActivitiesImpl;
 import org.acme.patient.onboarding.model.Doctor;
 import org.acme.patient.onboarding.model.Hospital;
-import org.acme.patient.onboarding.utils.HospitalsAndDoctorsProducer;
+import org.acme.patient.onboarding.utils.OnboardingServiceClient;
 import org.acme.patient.onboarding.wokflow.OnboardingWorkflowImpl;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
+import org.eclipse.microprofile.rest.client.inject.RestClient;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.event.Observes;
@@ -28,11 +29,8 @@ public class WorkflowApplicationObserver {
     String taskQueue;
 
     @Inject
-    List<Hospital> hospitals;
-
-    @Inject
-    List<Doctor> doctors;
-
+    @RestClient
+    OnboardingServiceClient serviceClient;
 
     void onStart(@Observes StartupEvent ev) {
         WorkflowServiceStubs service = WorkflowServiceStubs.newInstance();
@@ -41,7 +39,7 @@ public class WorkflowApplicationObserver {
         Worker worker = factory.newWorker(taskQueue);
 
         worker.registerWorkflowImplementationTypes(OnboardingWorkflowImpl.class);
-        worker.registerActivitiesImplementations(new OnboardingActivitiesImpl(hospitals, doctors));
+        worker.registerActivitiesImplementations(new OnboardingActivitiesImpl(serviceClient));
 
         factory.start();
     }

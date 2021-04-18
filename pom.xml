@@ -10,6 +10,7 @@
   <modules>
     <module>onboarding-app</module>
     <module>onboarding-services</module>
+    <module>onboarding-model</module>
   </modules>
 
 </project>

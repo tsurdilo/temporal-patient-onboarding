@@ -23,10 +23,14 @@ public class OnboardingWorkflowImpl implements OnboardingWorkflow {
 
         try {
             // simple pipeline-like execution of activities
+            // 1. store new patient
             onboardingPatient = activities.storeNewPatient(onboardingPatient);
+            // 2. assign hospital to patient
             onboardingPatient = activities.assignHospitalToPatient(onboardingPatient);
+            // 3. assign doctor to patient
             onboardingPatient = activities.assignDoctorToPatient(onboardingPatient);
-            onboardingPatient = activities.finishOnboarding(onboardingPatient);
+            // 4. finalize
+            onboardingPatient = activities.finalizeOnboarding(onboardingPatient);
 
             return onboardingPatient;
         } catch (Exception e) {

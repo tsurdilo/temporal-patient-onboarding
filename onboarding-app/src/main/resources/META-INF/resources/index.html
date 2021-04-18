@@ -124,7 +124,7 @@
 
     var lastmessage = "";
     updateMessage = function() {
-        fetch('http://localhost:8081/messages-collector').then(response => response.text()).then(message => {
+        fetch('http://localhost:8081/onboard').then(response => response.text()).then(message => {
             if(message == lastmessage || message.trim() === "") {
                 // nothing....
             } else {
