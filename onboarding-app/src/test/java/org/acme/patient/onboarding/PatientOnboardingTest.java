@@ -8,11 +8,11 @@ import io.temporal.client.WorkflowClient;
 import io.temporal.client.WorkflowOptions;
 import io.temporal.testing.TestWorkflowEnvironment;
 import io.temporal.worker.Worker;
-import org.acme.patient.onboarding.activities.OnboardingActivities;
+import org.acme.patient.onboarding.app.ServiceExecution;
 import org.acme.patient.onboarding.model.Patient;
 import org.acme.patient.onboarding.utils.OnboardingServiceClient;
-import org.acme.patient.onboarding.wokflow.OnboardingWorkflow;
-import org.acme.patient.onboarding.wokflow.OnboardingWorkflowImpl;
+import org.acme.patient.onboarding.app.Onboarding;
+import org.acme.patient.onboarding.app.OnboardingImpl;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 import org.junit.jupiter.api.*;
 
@@ -34,7 +34,7 @@ public class PatientOnboardingTest {
     public static void setUp() {
         testEnv = TestWorkflowEnvironment.newInstance();
         worker = testEnv.newWorker(taskQueue);
-        worker.registerWorkflowImplementationTypes(OnboardingWorkflowImpl.class);
+        worker.registerWorkflowImplementationTypes(OnboardingImpl.class);
 
         client = testEnv.getWorkflowClient();
     }
@@ -47,7 +47,7 @@ public class PatientOnboardingTest {
     @Test
     public void testMockedPatientOnboarding() {
         // mock our workflow activities
-        OnboardingActivities activities = mock(OnboardingActivities.class);
+        ServiceExecution activities = mock(ServiceExecution.class);
 
         Patient testPatient = new Patient("Tester", "22", "30041", "", "", "Asthma");
         Patient onboardedPatient = new Patient("Tester", "22", "30041", "", "", "Asthma");
@@ -62,9 +62,9 @@ public class PatientOnboardingTest {
 
         testEnv.start();
 
-        OnboardingWorkflow workflow =
+        Onboarding workflow =
                 client.newWorkflowStub(
-                        OnboardingWorkflow.class, WorkflowOptions.newBuilder()
+                        Onboarding.class, WorkflowOptions.newBuilder()
                                 .setWorkflowId("patientonboarding-" + testPatient.getName())
                                 .setTaskQueue(taskQueue).build());
 

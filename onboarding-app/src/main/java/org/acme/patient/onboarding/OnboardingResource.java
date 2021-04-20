@@ -2,7 +2,7 @@ package org.acme.patient.onboarding;
 
 import io.temporal.client.WorkflowOptions;
 import org.acme.patient.onboarding.model.Patient;
-import org.acme.patient.onboarding.wokflow.OnboardingWorkflow;
+import org.acme.patient.onboarding.app.Onboarding;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 
 import javax.inject.Inject;
@@ -25,9 +25,9 @@ public class OnboardingResource {
     public Patient doOnboard(Patient patient) {
         // start a new workflow execution
         // use the patient name for the unique workflow id
-        OnboardingWorkflow workflow =
+        Onboarding workflow =
                 observer.getClient().newWorkflowStub(
-                        OnboardingWorkflow.class, WorkflowOptions.newBuilder()
+                        Onboarding.class, WorkflowOptions.newBuilder()
                                 .setWorkflowId(idPrefix + patient.getName().replaceAll(" ", "-").toLowerCase())
                                 .setTaskQueue(taskQueue).build());
 

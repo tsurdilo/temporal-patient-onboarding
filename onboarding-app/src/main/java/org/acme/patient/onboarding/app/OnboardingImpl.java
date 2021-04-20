@@ -1,13 +1,12 @@
-package org.acme.patient.onboarding.wokflow;
+package org.acme.patient.onboarding.app;
 
 import io.temporal.workflow.Saga;
-import org.acme.patient.onboarding.activities.OnboardingActivities;
 import org.acme.patient.onboarding.model.Patient;
 import org.acme.patient.onboarding.utils.ActivityStubUtils;
 
-public class OnboardingWorkflowImpl implements OnboardingWorkflow {
+public class OnboardingImpl implements Onboarding {
 
-    OnboardingActivities activities = ActivityStubUtils.getActivitiesStubWithRetries();
+    ServiceExecution activities = ActivityStubUtils.getActivitiesStubWithRetries();
 
     @Override
     public Patient onboardNewPatient(Patient patient) {

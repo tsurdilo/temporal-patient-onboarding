@@ -6,18 +6,15 @@ import io.temporal.client.WorkflowClient;
 import io.temporal.serviceclient.WorkflowServiceStubs;
 import io.temporal.worker.Worker;
 import io.temporal.worker.WorkerFactory;
-import org.acme.patient.onboarding.activities.OnboardingActivitiesImpl;
-import org.acme.patient.onboarding.model.Doctor;
-import org.acme.patient.onboarding.model.Hospital;
+import org.acme.patient.onboarding.app.ServiceExecutionImpl;
 import org.acme.patient.onboarding.utils.OnboardingServiceClient;
-import org.acme.patient.onboarding.wokflow.OnboardingWorkflowImpl;
+import org.acme.patient.onboarding.app.OnboardingImpl;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.event.Observes;
 import javax.inject.Inject;
-import java.util.List;
 
 @ApplicationScoped
 public class WorkflowApplicationObserver {
@@ -38,8 +35,8 @@ public class WorkflowApplicationObserver {
         factory = WorkerFactory.newInstance(client);
         Worker worker = factory.newWorker(taskQueue);
 
-        worker.registerWorkflowImplementationTypes(OnboardingWorkflowImpl.class);
-        worker.registerActivitiesImplementations(new OnboardingActivitiesImpl(serviceClient));
+        worker.registerWorkflowImplementationTypes(OnboardingImpl.class);
+        worker.registerActivitiesImplementations(new ServiceExecutionImpl(serviceClient));
 
         factory.start();
     }
