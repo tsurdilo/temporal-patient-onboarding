@@ -18,6 +18,11 @@ The demo is composed of three modules:
 workflow retries and compensation in cases of failures.
 3. The `onboarding-model` contains our domain model
 
+## NOTE
+
+This code is for demo purposes only. It is *NOT* meant to be 
+used in production. 
+
 ## Running the demo
 
 1. Start the Temporal Service (docker compose):
