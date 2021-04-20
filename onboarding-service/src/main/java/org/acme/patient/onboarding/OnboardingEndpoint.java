@@ -21,20 +21,16 @@ public class OnboardingEndpoint {
     @Inject
     List<Doctor> doctors;
 
-    private String message = "";
-
     @POST
     @Path("storenew")
     public synchronized Patient storeNewPatient(Patient patient) {
-        this.message = "Storing new patient: " + patient.getName();
+        // do nothing...
         return patient;
     }
 
     @POST
     @Path("assignhospital")
     public synchronized Patient assignHospitalToPatient(Patient patient) {
-        this.message = "Assigning hospital to patient: " + patient.getName();
-
         Hospital hospital = hospitals.stream().filter(h -> h.getZip().equals(patient.getZip()))
                 .findFirst()
                 .orElse(new Hospital("Local Hospital","123 Local Street", "555-55-5555", "12345"));
@@ -46,8 +42,6 @@ public class OnboardingEndpoint {
     @POST
     @Path("assigndoctor")
     public synchronized Patient assignDoctorToPatient(Patient patient) {
-        this.message = "Assigning doctor to patient: " + patient.getName();
-
         Doctor doctor = doctors.stream().filter(d -> d.getSpecialty().equals(patient.getCondition()))
                 .findFirst()
                 .orElse(new Doctor("Michael Scott", "img/docfemale.png", "General"));
@@ -59,14 +53,8 @@ public class OnboardingEndpoint {
     @POST
     @Path("finalize")
     public synchronized Patient finalizeOnboarding(Patient patient) {
-        this.message = "Finalizing patient onboarding: " + patient.getName();
         patient.setOnboarded("yes");
         return patient;
-    }
-
-    @GET
-    public synchronized String getMessage() {
-        return message;
     }
 }
 

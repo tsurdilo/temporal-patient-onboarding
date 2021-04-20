@@ -8,9 +8,9 @@
   <packaging>pom</packaging>
 
   <modules>
+    <module>onboarding-model</module>
     <module>onboarding-app</module>
     <module>onboarding-service</module>
-    <module>onboarding-model</module>
   </modules>
 
 </project>

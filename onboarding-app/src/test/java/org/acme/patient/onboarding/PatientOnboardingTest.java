@@ -49,8 +49,8 @@ public class PatientOnboardingTest {
         // mock our workflow activities
         ServiceExecution activities = mock(ServiceExecution.class);
 
-        Patient testPatient = new Patient("Tester", "22", "30041", "", "", "Asthma");
-        Patient onboardedPatient = new Patient("Tester", "22", "30041", "", "", "Asthma");
+        Patient testPatient = new Patient("123", "Tester", "22", "30041", "", "", "Asthma");
+        Patient onboardedPatient = new Patient("123", "Tester", "22", "30041", "", "", "Asthma");
         onboardedPatient.setOnboarded("yes");
 
         // mock activity methods
@@ -65,7 +65,7 @@ public class PatientOnboardingTest {
         Onboarding workflow =
                 client.newWorkflowStub(
                         Onboarding.class, WorkflowOptions.newBuilder()
-                                .setWorkflowId("patientonboarding-" + testPatient.getName())
+                                .setWorkflowId(testPatient.getId())
                                 .setTaskQueue(taskQueue).build());
 
         // Execute a workflow waiting for it to complete.

@@ -17,6 +17,10 @@
         app.controller("NewPatientOnboardingController", function ($scope, $http) {
 
             $scope.onboardedpatients = [];
+            $scope.currentid = "";
+            $scope.lastmessage = "";
+
+            $scope.interval;
 
             $scope.form = {
                 name: "",
@@ -27,7 +31,9 @@
 
             // Invoke workflow execution
             $scope.add = function () {
+                $scope.currentid = getUniqueId();
                 let newpatientdata = {
+                    "id":  $scope.currentid,
                     "name": $scope.form.name,
                     "age": $scope.form.age,
                     "zip": $scope.form.zip,
@@ -35,6 +41,8 @@
                     "insuranceId": " ",
                     "condition": $scope.form.condition
                 };
+
+                $scope.interval = setInterval(updateMessage, 1000);
 
                 $http({
                     method: "POST",
@@ -48,6 +56,7 @@
             };
 
             function _success(response) {
+                clearInterval($scope.interval);
                 if(response.data.onboarded == "no") {
                     swal({
                         title: "Unable to onboard patient",
@@ -61,6 +70,7 @@
             }
 
             function _error(response) {
+                clearInterval($scope.interval);
                 alert(response.statusText);
             }
 
@@ -70,6 +80,31 @@
                 $scope.form.zip = "";
                 $scope.form.condition = "";
             }
+
+            function getUniqueId() {
+                return Math.random().toString(36).substr(2, 6);
+            };
+
+            function updateMessage() {
+                fetch('http://localhost:8080/onboard?' + new URLSearchParams({
+                    id: $scope.currentid
+                })).then(response => response.text()).then(message => {
+                    if(message == $scope.lastmessage || message.trim() === "") {
+                        // nothing....
+                    } else {
+                        $scope.lastmessage = message;
+                        toShowMessage = message.replace(/message=/g,'');
+                        toShowMessage = decodeURIComponent((toShowMessage + '').replace(/\+/g, '%20'));
+                        swal({
+                            title: toShowMessage,
+                            text: "",
+                            icon: "success",
+                            timer: 5000
+                        });
+                    }
+                    }
+                );
+            };
         });
     </script>
 </head>
@@ -99,7 +134,9 @@
     <br/>
     <h3>Onboarded Patients</h3>
     <table style="width:100%">
+        <thead style="display:table-header-group;">
         <tr>
+            <th align="left"><b>Id</b></th>
             <th align="left"><b>Name</b></th>
             <th align="left"><b>Age</b></th>
             <th align="left"><b>Zip</b></th>
@@ -108,7 +145,10 @@
             <th align="left"><b>Assigned to Doctor</b></th>
             <th align="left"><b>Onboarded</b></th>
         </tr>
+        </thead>
+        <tbody>
         <tr ng-repeat="op in onboardedpatients">
+            <td>{{ op.id }}</td>
             <td>{{ op.name }}</td>
             <td>{{ op.age }}</td>
             <td>{{ op.zip }}</td>
@@ -117,35 +157,8 @@
             <td>{{ op.doctor.name }}</td>
             <td>{{ op.onboarded }}</td>
         </tr>
+        </tbody>
     </table>
 </div>
-
-<script lang="javascript">
-
-    var lastmessage = "";
-    updateMessage = function() {
-        fetch('http://localhost:8090/onboard').then(response => response.text()).then(message => {
-            if(message == lastmessage || message.trim() === "") {
-                // nothing....
-            } else {
-                lastmessage = message;
-                toShowMessage = message.replace(/message=/g,'');
-                toShowMessage = decodeURIComponent((toShowMessage + '').replace(/\+/g, '%20'));
-                swal({
-                    title: toShowMessage,
-                    text: "",
-                    icon: "success",
-                    timer: 5000
-                });
-            }
-            }
-        );
-    };
-    window.setInterval(updateMessage, 1000);
-
-    getUniqueId = function () {
-        return '_' + Math.random().toString(36).substr(2, 9);
-    };
-</script>
 </body>
 </html>

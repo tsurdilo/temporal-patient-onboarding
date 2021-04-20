@@ -1,6 +1,7 @@
 package org.acme.patient.onboarding.model;
 
 public class Patient {
+    private String id;
     private String name;
     private String age;
     private String zip;
@@ -13,13 +14,22 @@ public class Patient {
 
     public Patient() {}
 
-    public Patient(String name, String age, String zip, String insurance, String insuranceId, String condition) {
+    public Patient(String id, String name, String age, String zip, String insurance, String insuranceId, String condition) {
+        this.id = id;
         this.name = name;
         this.age = age;
         this.zip = zip;
         this.insurance = insurance;
         this.insuranceId = insuranceId;
         this.condition = condition;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {
