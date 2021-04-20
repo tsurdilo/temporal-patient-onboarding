@@ -124,7 +124,7 @@
 
     var lastmessage = "";
     updateMessage = function() {
-        fetch('http://localhost:8081/onboard').then(response => response.text()).then(message => {
+        fetch('http://localhost:8090/onboard').then(response => response.text()).then(message => {
             if(message == lastmessage || message.trim() === "") {
                 // nothing....
             } else {
@@ -142,6 +142,10 @@
         );
     };
     window.setInterval(updateMessage, 1000);
+
+    getUniqueId = function () {
+        return '_' + Math.random().toString(36).substr(2, 9);
+    };
 </script>
 </body>
 </html>
