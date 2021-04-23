@@ -3,6 +3,9 @@ package org.acme.patient.onboarding;
 import org.acme.patient.onboarding.model.Doctor;
 import org.acme.patient.onboarding.model.Hospital;
 import org.acme.patient.onboarding.model.Patient;
+import org.eclipse.microprofile.openapi.annotations.OpenAPIDefinition;
+import org.eclipse.microprofile.openapi.annotations.info.Info;
+import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
@@ -11,8 +14,9 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import java.util.List;
 
-@Path("onboard")
 @ApplicationScoped
+@Path("onboard")
+@Tag(name = "Onboarding Services Endpoints")
 public class OnboardingEndpoint {
 
     @Inject

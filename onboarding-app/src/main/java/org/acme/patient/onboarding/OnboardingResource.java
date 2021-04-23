@@ -4,11 +4,15 @@ import io.temporal.client.WorkflowOptions;
 import org.acme.patient.onboarding.model.Patient;
 import org.acme.patient.onboarding.app.Onboarding;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
+import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.ws.rs.*;
 
+@ApplicationScoped
 @Path("/onboard")
+@Tag(name = "New Patient Onboarding Endpoint")
 public class OnboardingResource {
 
     @Inject
