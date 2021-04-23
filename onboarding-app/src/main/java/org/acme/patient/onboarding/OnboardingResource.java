@@ -1,14 +1,12 @@
 package org.acme.patient.onboarding;
 
 import io.temporal.client.WorkflowOptions;
-import io.temporal.client.WorkflowStub;
 import org.acme.patient.onboarding.model.Patient;
 import org.acme.patient.onboarding.app.Onboarding;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 
 import javax.inject.Inject;
 import javax.ws.rs.*;
-import java.util.Optional;
 
 @Path("/onboard")
 public class OnboardingResource {

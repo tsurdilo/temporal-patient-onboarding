@@ -16,7 +16,7 @@ public class OnboardingImpl implements Onboarding {
         Saga saga = new Saga(new Saga.Options.Builder().setParallelCompensation(false).build());
         saga.addCompensation(
                 () -> {
-                    System.out.println("*********** PERFORMING COMPENSATION");
+                    System.out.println("WORKFLOW: PERFORMING COMPENSATION");
                     patient.setOnboarded("no");
                 });
 
@@ -50,4 +50,5 @@ public class OnboardingImpl implements Onboarding {
     public String getStatusMessage() {
         return statusMessage;
     }
+    
 }

@@ -89,7 +89,7 @@
                 fetch('http://localhost:8080/onboard?' + new URLSearchParams({
                     id: $scope.currentid
                 })).then(response => response.text()).then(message => {
-                    if(message == $scope.lastmessage || message.trim() === "") {
+                    if(message == $scope.lastmessage || message.trim() === "" || message.startsWith("Unable")) {
                         // nothing....
                     } else {
                         $scope.lastmessage = message;
