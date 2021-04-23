@@ -20,7 +20,6 @@ public class OnboardingImpl implements Onboarding {
                     patient.setOnboarded("no");
                 });
 
-
         try {
             // simple pipeline-like execution of activities
             // 1. store new patient
