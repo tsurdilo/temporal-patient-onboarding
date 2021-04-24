@@ -6,37 +6,37 @@ import org.acme.patient.onboarding.utils.ActivityStubUtils;
 
 public class OnboardingImpl implements Onboarding {
 
-    ServiceExecution activities = ActivityStubUtils.getActivitiesStubWithRetries();
-    String statusMessage;
+    ServiceExecution serviceExecution = ActivityStubUtils.getActivitiesStubWithRetries();
+    String status;
+    Patient onboardingPatient;
 
     @Override
     public Patient onboardNewPatient(Patient patient) {
-        Patient onboardingPatient = patient;
+        onboardingPatient = patient;
 
         Saga saga = new Saga(new Saga.Options.Builder().setParallelCompensation(false).build());
         saga.addCompensation(
                 () -> {
-                    System.out.println("WORKFLOW: PERFORMING COMPENSATION");
-                    patient.setOnboarded("no");
+                    status = "Compensating Onboarding for: " + this.onboardingPatient.getName();
+                    serviceExecution.compensateOnboarding(this.onboardingPatient);
                 });
 
         try {
-            // simple pipeline-like execution of activities
             // 1. store new patient
-            this.statusMessage = "Storing new patient: " + patient.getName();
-            onboardingPatient = activities.storeNewPatient(onboardingPatient);
+            status = "Storing new patient: " + onboardingPatient.getName();
+            onboardingPatient = serviceExecution.storeNewPatient(onboardingPatient);
 
             // 2. assign hospital to patient
-            this.statusMessage = "Assigning hospital to patient: " + patient.getName();
-            onboardingPatient = activities.assignHospitalToPatient(onboardingPatient);
+            status = "Assigning hospital to patient: " + onboardingPatient.getName();
+            onboardingPatient = serviceExecution.assignHospitalToPatient(onboardingPatient);
 
             // 3. assign doctor to patient
-            this.statusMessage = "Assigning doctor to patient: " + patient.getName();
-            onboardingPatient = activities.assignDoctorToPatient(onboardingPatient);
+            status = "Assigning doctor to patient: " + onboardingPatient.getName();
+            onboardingPatient = serviceExecution.assignDoctorToPatient(onboardingPatient);
 
             // 4. finalize
-            this.statusMessage = "Finalizing patient onboarding: " + patient.getName();
-            onboardingPatient = activities.finalizeOnboarding(onboardingPatient);
+            status = "Finalizing patient onboarding: " + onboardingPatient.getName();
+            onboardingPatient = serviceExecution.finalizeOnboarding(onboardingPatient);
 
             return onboardingPatient;
         } catch (Exception e) {
@@ -46,8 +46,12 @@ public class OnboardingImpl implements Onboarding {
     }
 
     @Override
-    public String getStatusMessage() {
-        return statusMessage;
+    public String getStatus() {
+        return status;
+    }
+
+    public void compensateOnboarding(Patient patient) {
+        patient.setOnboarded("no");
     }
     
 }

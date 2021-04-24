@@ -9,4 +9,5 @@ public interface ServiceExecution {
     Patient assignHospitalToPatient(Patient patient);
     Patient assignDoctorToPatient(Patient patient);
     Patient finalizeOnboarding(Patient patient);
+    Patient compensateOnboarding(Patient patient);
 }

@@ -10,13 +10,9 @@ import io.temporal.testing.TestWorkflowEnvironment;
 import io.temporal.worker.Worker;
 import org.acme.patient.onboarding.app.ServiceExecution;
 import org.acme.patient.onboarding.model.Patient;
-import org.acme.patient.onboarding.utils.OnboardingServiceClient;
 import org.acme.patient.onboarding.app.Onboarding;
 import org.acme.patient.onboarding.app.OnboardingImpl;
-import org.eclipse.microprofile.rest.client.inject.RestClient;
 import org.junit.jupiter.api.*;
-
-import javax.inject.Inject;
 
 public class PatientOnboardingTest {
 
@@ -24,11 +20,6 @@ public class PatientOnboardingTest {
     private static Worker worker;
     private static WorkflowClient client;
     private static String taskQueue = "TestOnboardingTaskQueue";
-
-    @Inject
-    @RestClient
-    OnboardingServiceClient serviceClient;
-
 
     @BeforeAll
     public static void setUp() {
@@ -46,6 +37,7 @@ public class PatientOnboardingTest {
 
     @Test
     public void testMockedPatientOnboarding() {
+
         // mock our workflow activities
         ServiceExecution activities = mock(ServiceExecution.class);
 
@@ -58,6 +50,7 @@ public class PatientOnboardingTest {
         when(activities.assignHospitalToPatient(any())).thenReturn(testPatient);
         when(activities.assignDoctorToPatient(any())).thenReturn(testPatient);
         when(activities.finalizeOnboarding(any())).thenReturn(onboardedPatient);
+
         worker.registerActivitiesImplementations(activities);
 
         testEnv.start();

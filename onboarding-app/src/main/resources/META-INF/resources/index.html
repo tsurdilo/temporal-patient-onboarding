@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8"/>
     <title>Temporal - Patient Onboarding Demo</title>
@@ -9,7 +9,16 @@
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
+    <style>
+        .float-container {
+            padding: 10px;
+         }
+        .float-child {
+             width: 50%;
+             float: left;
+             padding: 10px;
+         }
+    </style>
     <script type="text/javascript">
 
         var app = angular.module("NewPatientOnboarding", []);
@@ -115,50 +124,55 @@
     <img src="https://temporal.io/press/favicon.png" width="10%">
     <h1>Temporal Demo: New Patient Onboarding</h1>
     <br/>
-    <h3>Enter new patient info:</h3>
-    <form ng-submit="add()">
-        <div class="row">
-            <div class="col-4"><input type="text" placeholder="Name" ng-model="form.name" size="30"/></div>
+    <div class="float-container">
+        <div class="float-child">
+            <h3>Enter new patient info:</h3>
+            <form ng-submit="add()">
+                <div class="row">
+                    <div class="col-6"><input type="text" placeholder="Name" ng-model="form.name" size="30"/></div>
+                </div>
+                <div class="row">
+                    <div class="col-6"><input type="text" placeholder="Age" ng-model="form.age" size="30"/></div>
+                </div>
+                <div class="row">
+                    <div class="col-6"><input type="text" placeholder="Zip" ng-model="form.zip" size="30"/></div>
+                </div>
+                <div class="row">
+                    <div class="col-6"><input type="text" placeholder="Condition" ng-model="form.condition" size="30"/></div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <input type="submit" value="Onboard patient"/>
+                    </div>
+                </div>
+            </form>
         </div>
-        <div class="row">
-            <div class="col-4"><input type="text" placeholder="Age" ng-model="form.age" size="30"/></div>
+        <div class="float-child">
+            <h3>Onboarding Info</h3>
+            <table class="table table-striped">
+                <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Hospital</th>
+                    <th scope="col">Doctor</th>
+                    <th scope="col">Onboarded</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="op in onboardedpatients">
+                    <td>{{$index + 1}}</td>
+                    <td>{{ op.id }}</td>
+                    <td>{{ op.name }}</td>
+                    <td>{{ op.hospital.name }}</td>
+                    <td>{{ op.doctor.name }}</td>
+                    <td>{{ op.onboarded }}</td>
+                </tr>
+                </tbody>
+            </table>
         </div>
-        <div class="row">
-            <div class="col-4"><input type="text" placeholder="Zip" ng-model="form.zip" size="30"/></div>
-        </div>
-        <div class="row">
-            <div class="col-4"><input type="text" placeholder="Condition" ng-model="form.condition" size="30"/></div>
-        </div>
-        <input type="submit" value="Onboard patient"/>
-    </form>
-    <br/>
-    <h3>Onboarded Patients</h3>
-    <table style="width:100%">
-        <thead style="display:table-header-group;">
-        <tr>
-            <th align="left"><b>Id</b></th>
-            <th align="left"><b>Name</b></th>
-            <th align="left"><b>Age</b></th>
-            <th align="left"><b>Zip</b></th>
-            <th align="left"><b>Condition</b></th>
-            <th align="left"><b>Assigned to Hospital</b></th>
-            <th align="left"><b>Assigned to Doctor</b></th>
-            <th align="left"><b>Onboarded</b></th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr ng-repeat="op in onboardedpatients">
-            <td>{{ op.id }}</td>
-            <td>{{ op.name }}</td>
-            <td>{{ op.age }}</td>
-            <td>{{ op.zip }}</td>
-            <td>{{ op.condition }}</td>
-            <td>{{ op.hospital.name }}</td>
-            <td>{{ op.doctor.name }}</td>
-            <td>{{ op.onboarded }}</td>
-        </tr>
-        </tbody>
-    </table>
+    </div>
 </div>
 </body>
 </html>

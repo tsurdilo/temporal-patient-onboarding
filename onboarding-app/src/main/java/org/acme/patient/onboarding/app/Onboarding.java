@@ -13,7 +13,7 @@ public interface Onboarding {
     Patient onboardNewPatient(Patient patient);
 
     @QueryMethod
-    String getStatusMessage();
+    String getStatus();
 }
 
 

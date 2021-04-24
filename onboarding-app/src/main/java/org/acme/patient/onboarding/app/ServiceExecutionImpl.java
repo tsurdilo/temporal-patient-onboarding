@@ -23,26 +23,38 @@ public class ServiceExecutionImpl implements ServiceExecution {
     @Override
     public Patient assignHospitalToPatient(Patient patient) {
         // call onboarding service
-        Patient updatedPatient = serviceClient.assignHospitalToPatient(patient);
+        patient = serviceClient.assignHospitalToPatient(patient);
         // simulate some work...
         sleep(5);
-        return updatedPatient;
+        return patient;
     }
 
     @Override
     public Patient assignDoctorToPatient(Patient patient) {
-        Patient updatedPatient = serviceClient.assignDoctorToPatient(patient);
+        patient = serviceClient.assignDoctorToPatient(patient);
         // simulate some work...
         sleep(5);
-        return updatedPatient;
+        return patient;
     }
 
     @Override
     public Patient finalizeOnboarding(Patient patient) {
-        Patient updatedPatient = serviceClient.finalizeOnboarding(patient);
+        patient = serviceClient.finalizeOnboarding(patient);
         // simulate some work...
         sleep(5);
-        return updatedPatient;
+        return patient;
+    }
+
+    @Override
+    public Patient compensateOnboarding(Patient patient) {
+        patient.setOnboarded("no");
+        // simulate some work...
+        sleep(5);
+        return patient;
+    }
+
+    public void setOnboardingServiceClient(OnboardingServiceClient serviceClient) {
+        this.serviceClient = serviceClient;
     }
 
     private void sleep(int seconds) {

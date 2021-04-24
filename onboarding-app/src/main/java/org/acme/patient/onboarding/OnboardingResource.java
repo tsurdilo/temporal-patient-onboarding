@@ -39,7 +39,7 @@ public class OnboardingResource {
         // query workflow to get the status message
         try {
             Onboarding workflow = observer.getClient().newWorkflowStub(Onboarding.class, patientId);
-            return workflow.getStatusMessage();
+            return workflow.getStatus();
         } catch (Exception e) {
             e.printStackTrace();
             return "Unable to query workflow with id: " + patientId;
