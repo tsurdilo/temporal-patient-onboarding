@@ -123,7 +123,7 @@ has successfully completed:
 You can click on the Run Id link and explore the workflow execution history.
 
 
-## 2. Simulating Service failure - Retries
+## 2. Simulating Services failure - Retries
 
 For this scenario shut down `onboarding-services` so it is not running.
 Start onboarding another patient through the UI and submit the form.
@@ -135,7 +135,7 @@ After about 5 seconds bring up `onboarding-services` again and watch the UI.
 You will see that workflow retries were successfull and you will start seeing the onboarding 
 popup messages and that the patient was successfully onboarded.
 
-## 3. Simulating Service failure - Compensation
+## 3. Simulating Services failure - Compensation
 
 For this scenario shut down `onboarding-services` so it is not running. 
 Start onboarding another patient through the UI and submit the form.
@@ -149,7 +149,7 @@ performed its compensation (in this demo it is just printing out a message, but 
 
 You will see a "no" in the onboarded patients "Onboarded" table column.
 
-## 3. Simulating Temporal workflow replay
+## 3. Simulating Temporal Server Failure - Recovery
 
 For this scenario make sure our app and services are running.
 Start onboarding another patient through the UI and submit the form.
