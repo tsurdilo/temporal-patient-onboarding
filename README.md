@@ -153,7 +153,7 @@ performed its compensation (in this demo it is just printing out a message, but 
 
 You will see a "no" in the onboarded patients "Onboarded" table column.
 
-## 3. Simulating Temporal Server Failure - Recovery
+## 4. Simulating Temporal Server Failure - Recovery
 
 For this scenario make sure our app and services are running.
 Start onboarding another patient through the UI and submit the form.
