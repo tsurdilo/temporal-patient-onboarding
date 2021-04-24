@@ -56,9 +56,13 @@ cd onboarding-app
 mvn clean install quarkus:dev
 ```
 
-4. Access the demo UI in browser via: [http://localhost:8080](http://localhost:8080)
+4. Access the demo services Swagger UI via: [http://localhost:8090/q/swagger-ui/](http://localhost:8090/q/swagger-ui/)
 
-5. Access the Temporal Web-Ui via: [http://localhost:8088](http://localhost:8088)
+5. Acess the demo app Swagger UI via: [http://localhost:8080/q/swagger-ui/](http://localhost:8080/q/swagger-ui/)
+
+6. Access the demo UI in browser via: [http://localhost:8080](http://localhost:8080)
+
+7. Access the Temporal Web-Ui via: [http://localhost:8088](http://localhost:8088)
 
 ## Interacting with the demo
 
