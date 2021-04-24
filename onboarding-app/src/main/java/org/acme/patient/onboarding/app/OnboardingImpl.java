@@ -15,11 +15,10 @@ public class OnboardingImpl implements Onboarding {
         onboardingPatient = patient;
 
         Saga saga = new Saga(new Saga.Options.Builder().setParallelCompensation(false).build());
-        saga.addCompensation(
-                () -> {
-                    status = "Compensating Onboarding for: " + this.onboardingPatient.getName();
-                    serviceExecution.compensateOnboarding(this.onboardingPatient);
-                });
+        saga.addCompensation(() -> {
+            status = "Compensating Onboarding for: " + onboardingPatient.getName();
+            this.onboardingPatient =  serviceExecution.compensateOnboarding(this.onboardingPatient);
+        });
 
         try {
             // 1. store new patient
@@ -38,20 +37,16 @@ public class OnboardingImpl implements Onboarding {
             status = "Finalizing patient onboarding: " + onboardingPatient.getName();
             onboardingPatient = serviceExecution.finalizeOnboarding(onboardingPatient);
 
-            return onboardingPatient;
         } catch (Exception e) {
             saga.compensate();
-            return patient;
         }
+
+        return onboardingPatient;
     }
 
     @Override
     public String getStatus() {
         return status;
-    }
-
-    public void compensateOnboarding(Patient patient) {
-        patient.setOnboarded("no");
     }
     
 }

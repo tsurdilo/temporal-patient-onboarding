@@ -53,10 +53,6 @@ public class ServiceExecutionImpl implements ServiceExecution {
         return patient;
     }
 
-    public void setOnboardingServiceClient(OnboardingServiceClient serviceClient) {
-        this.serviceClient = serviceClient;
-    }
-
     private void sleep(int seconds) {
         try {
             Thread.sleep(seconds * 1000);

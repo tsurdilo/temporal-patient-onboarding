@@ -101,14 +101,19 @@
                     if(message == $scope.lastmessage || message.trim() === "" || message.startsWith("Unable")) {
                         // nothing....
                     } else {
+                        sicon = "success";
+                        if(message.startsWith("Compensating")) {
+                            sicon = "info";
+                        }
                         $scope.lastmessage = message;
                         toShowMessage = message.replace(/message=/g,'');
                         toShowMessage = decodeURIComponent((toShowMessage + '').replace(/\+/g, '%20'));
                         swal({
                             title: toShowMessage,
                             text: "",
-                            icon: "success",
-                            timer: 5000
+                            icon: sicon,
+                            timer: 5000,
+                            button: ""
                         });
                     }
                     }
