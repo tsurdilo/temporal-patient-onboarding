@@ -3,6 +3,10 @@
 Shows Temporal workflow execution running on [Quarkus](https://quarkus.io/).
 Uses the [Temporal Java SDK](https://github.com/temporalio/sdk-java).
 
+## Note
+
+This code is for demo purposes only. It is *NOT* meant to be used in production.
+
 ## About
 
 In this demo we show off a patient onboarding workflow.
@@ -17,11 +21,6 @@ The demo is composed of three modules:
 2. The `onboarding-services` module contains our services which the workflow activities are accessing. It is used to show
 workflow retries and compensation in cases of failures.
 3. The `onboarding-model` contains our domain model
-
-## NOTE
-
-This code is for demo purposes only. It is *NOT* meant to be 
-used in production. 
 
 ## Running the demo
 
@@ -125,7 +124,6 @@ has successfully completed:
 </p>
 
 You can click on the Run Id link and explore the workflow execution history.
-
 
 ## 2. Simulating Services failure - Retries
 
