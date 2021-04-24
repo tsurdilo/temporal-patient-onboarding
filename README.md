@@ -12,8 +12,8 @@ This code is for demo purposes only. It is *NOT* meant to be used in production.
 In this demo we show off a patient onboarding workflow.
 It's main purpose is to:
 * Show how to get up and running with Temporal
-* Show how to easily add retry logic to your workflows
-* Show how to easily add compensation logic to your workflows
+* Show how to easily add retry logic to your workflows using Temporal
+* Show how to easily add compensation logic to your workflows using Temporal
 * Show how you can add resiliency to your applications using Temporal
 
 The demo is composed of three modules:
