@@ -23,6 +23,6 @@ public interface OnboardingServiceClient {
     Patient assignDoctorToPatient(Patient patient);
 
     @POST
-    @Path("finalize")
-    Patient finalizeOnboarding(Patient patient);
+    @Path("notify")
+    Patient notifyPatient(Patient patient);
 }

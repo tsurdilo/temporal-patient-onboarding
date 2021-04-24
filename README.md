@@ -110,7 +110,7 @@ After the workflow run completes, the section of bottom of the scren will update
 that the patient is indeed onboarded:
 
 <p align="center">
-<img src="img/onboarded.png" height="150px"/>
+<img src="img/onboarded.png" height="450px"/>
 </p>
 
 Now let's take a look at our Temporal Web-UI client, it will show us that our workflow execution 

@@ -7,6 +7,7 @@ import org.acme.patient.onboarding.utils.ActivityStubUtils;
 public class OnboardingImpl implements Onboarding {
 
     ServiceExecution serviceExecution = ActivityStubUtils.getActivitiesStubWithRetries();
+
     String status;
     Patient onboardingPatient;
 
@@ -34,8 +35,8 @@ public class OnboardingImpl implements Onboarding {
             onboardingPatient = serviceExecution.assignDoctorToPatient(onboardingPatient);
 
             // 4. finalize
-            status = "Finalizing patient onboarding: " + onboardingPatient.getName();
-            onboardingPatient = serviceExecution.finalizeOnboarding(onboardingPatient);
+            status = "Notifying patient: " + onboardingPatient.getName();
+            onboardingPatient = serviceExecution.notifyPatient(onboardingPatient);
 
         } catch (Exception e) {
             saga.compensate();

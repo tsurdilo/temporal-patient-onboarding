@@ -38,8 +38,8 @@ public class ServiceExecutionImpl implements ServiceExecution {
     }
 
     @Override
-    public Patient finalizeOnboarding(Patient patient) {
-        patient = serviceClient.finalizeOnboarding(patient);
+    public Patient notifyPatient(Patient patient) {
+        patient = serviceClient.notifyPatient(patient);
         // simulate some work...
         sleep(5);
         return patient;

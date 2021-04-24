@@ -55,8 +55,8 @@ public class OnboardingEndpoint {
     }
 
     @POST
-    @Path("finalize")
-    public synchronized Patient finalizeOnboarding(Patient patient) {
+    @Path("notify")
+    public synchronized Patient notifyPatient(Patient patient) {
         patient.setOnboarded("yes");
         return patient;
     }

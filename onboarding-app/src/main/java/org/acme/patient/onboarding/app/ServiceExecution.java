@@ -8,6 +8,6 @@ public interface ServiceExecution {
     Patient storeNewPatient(Patient patient);
     Patient assignHospitalToPatient(Patient patient);
     Patient assignDoctorToPatient(Patient patient);
-    Patient finalizeOnboarding(Patient patient);
+    Patient notifyPatient(Patient patient);
     Patient compensateOnboarding(Patient patient);
 }

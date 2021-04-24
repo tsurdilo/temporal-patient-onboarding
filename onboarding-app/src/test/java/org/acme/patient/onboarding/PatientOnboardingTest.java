@@ -49,7 +49,7 @@ public class PatientOnboardingTest {
         when(activities.storeNewPatient(any())).thenReturn(testPatient);
         when(activities.assignHospitalToPatient(any())).thenReturn(testPatient);
         when(activities.assignDoctorToPatient(any())).thenReturn(testPatient);
-        when(activities.finalizeOnboarding(any())).thenReturn(onboardedPatient);
+        when(activities.notifyPatient(any())).thenReturn(onboardedPatient);
 
         worker.registerActivitiesImplementations(activities);
 
