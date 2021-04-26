@@ -7,6 +7,7 @@ import static org.mockito.Mockito.when;
 import io.temporal.client.WorkflowClient;
 import io.temporal.client.WorkflowOptions;
 import io.temporal.testing.TestWorkflowEnvironment;
+import io.temporal.testing.WorkflowReplayer;
 import io.temporal.worker.Worker;
 import org.acme.patient.onboarding.app.ServiceExecutor;
 import org.acme.patient.onboarding.model.Patient;
@@ -68,6 +69,12 @@ public class PatientOnboardingTest {
         Assertions.assertNotNull(resultPatient);
         Assertions.assertEquals("Tester", resultPatient.getName());
         Assertions.assertEquals("yes", resultPatient.getOnboarded());
+    }
+
+    @Test
+    public void testOnboardingReplay() throws Exception {
+        WorkflowReplayer.replayWorkflowExecutionFromResource(
+                "onboardingrunhistory.json", OnboardingImpl.class);
     }
 
 
