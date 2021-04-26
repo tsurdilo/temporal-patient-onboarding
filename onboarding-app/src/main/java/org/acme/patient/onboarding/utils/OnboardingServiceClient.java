@@ -1,5 +1,7 @@
 package org.acme.patient.onboarding.utils;
 
+import org.acme.patient.onboarding.model.Doctor;
+import org.acme.patient.onboarding.model.Hospital;
 import org.acme.patient.onboarding.model.Patient;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
@@ -11,18 +13,14 @@ import javax.ws.rs.Path;
 public interface OnboardingServiceClient {
 
     @POST
-    @Path("storenew")
-    Patient storeNewPatient(Patient patient);
-
-    @POST
     @Path("assignhospital")
-    Patient assignHospitalToPatient(Patient patient);
+    Hospital assignHospitalToPatient(String zip);
 
     @POST
     @Path("assigndoctor")
-    Patient assignDoctorToPatient(Patient patient);
+    Doctor assignDoctorToPatient(String condition);
 
     @POST
     @Path("notify")
-    Patient notifyPatient(Patient patient);
+    Patient notifyPatient(String email);
 }

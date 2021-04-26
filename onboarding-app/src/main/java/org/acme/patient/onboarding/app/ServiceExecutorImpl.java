@@ -1,5 +1,7 @@
 package org.acme.patient.onboarding.app;
 
+import org.acme.patient.onboarding.model.Doctor;
+import org.acme.patient.onboarding.model.Hospital;
 import org.acme.patient.onboarding.model.Patient;
 import org.acme.patient.onboarding.utils.OnboardingServiceClient;
 
@@ -12,37 +14,41 @@ public class ServiceExecutorImpl implements ServiceExecutor {
     }
 
     @Override
-    public Patient storeNewPatient(Patient patient) {
+    public Hospital assignHospitalToPatient(String zip) {
         // call onboarding service
-        Patient updatedPatient = serviceClient.storeNewPatient(patient);
+        Hospital hospital = serviceClient.assignHospitalToPatient(zip);
         // simulate some work...
         sleep(5);
-        return updatedPatient;
+        return hospital;
     }
 
     @Override
-    public Patient assignHospitalToPatient(Patient patient) {
-        // call onboarding service
-        patient = serviceClient.assignHospitalToPatient(patient);
+    public Doctor assignDoctorToPatient(String condition) {
+        Doctor doctor = serviceClient.assignDoctorToPatient(condition);
         // simulate some work...
         sleep(5);
-        return patient;
+        return doctor;
     }
 
     @Override
-    public Patient assignDoctorToPatient(Patient patient) {
-        patient = serviceClient.assignDoctorToPatient(patient);
+    public void notifyViaEmail(String email) {
+        serviceClient.notifyPatient(email);
         // simulate some work...
         sleep(5);
-        return patient;
     }
 
     @Override
-    public Patient notifyPatient(Patient patient) {
-        patient = serviceClient.notifyPatient(patient);
+    public void notifyViaText(String phone) {
+        serviceClient.notifyPatient(phone);
         // simulate some work...
         sleep(5);
-        return patient;
+    }
+
+    @Override
+    public String finalizeOnboarding() {
+        // simulate some work...
+        sleep(5);
+        return "yes";
     }
 
     @Override

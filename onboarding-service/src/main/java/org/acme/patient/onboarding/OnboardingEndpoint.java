@@ -26,39 +26,29 @@ public class OnboardingEndpoint {
     List<Doctor> doctors;
 
     @POST
-    @Path("storenew")
-    public synchronized Patient storeNewPatient(Patient patient) {
-        // do nothing...
-        return patient;
-    }
-
-    @POST
     @Path("assignhospital")
-    public synchronized Patient assignHospitalToPatient(Patient patient) {
-        Hospital hospital = hospitals.stream().filter(h -> h.getZip().equals(patient.getZip()))
+    public synchronized Hospital assignHospitalToPatient(String zip) {
+        Hospital hospital = hospitals.stream().filter(h -> h.getZip().equals(zip))
                 .findFirst()
                 .orElse(new Hospital("Local Hospital","123 Local Street", "555-55-5555", "12345"));
-        patient.setHospital(hospital);
 
-        return patient;
+        return hospital;
     }
 
     @POST
     @Path("assigndoctor")
-    public synchronized Patient assignDoctorToPatient(Patient patient) {
-        Doctor doctor = doctors.stream().filter(d -> d.getSpecialty().equals(patient.getCondition()))
+    public synchronized Doctor assignDoctorToPatient(String condition) {
+        Doctor doctor = doctors.stream().filter(d -> d.getSpecialty().equals(condition))
                 .findFirst()
                 .orElse(new Doctor("Michael Scott", "img/docfemale.png", "General"));
-        patient.setDoctor(doctor);
-
-        return patient;
+        return doctor;
     }
 
     @POST
     @Path("notify")
-    public synchronized Patient notifyPatient(Patient patient) {
-        patient.setOnboarded("yes");
-        return patient;
+    public synchronized void notifyPatient(String contact) {
+        // do nothing here for demo...
+        // irl would send email or text message or both
     }
 }
 

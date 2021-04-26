@@ -33,9 +33,11 @@
 
             $scope.form = {
                 name: "",
-                age: "",
                 zip: "",
-                condition: ""
+                condition: "",
+                email: "",
+                phone: "",
+                contactmethod: ""
             };
 
             // Invoke workflow execution
@@ -44,11 +46,14 @@
                 let newpatientdata = {
                     "id":  $scope.currentid,
                     "name": $scope.form.name,
-                    "age": $scope.form.age,
                     "zip": $scope.form.zip,
+                    "age": "",
                     "insurance": " ",
                     "insuranceId": " ",
-                    "condition": $scope.form.condition
+                    "condition": $scope.form.condition,
+                    "email": $scope.form.email,
+                    "phone": $scope.form.phone,
+                    "contactMethod": $scope.form.contactmethod
                 };
 
                 $scope.interval = setInterval(updateMessage, 1000);
@@ -85,9 +90,11 @@
 
             function _clearForm() {
                 $scope.form.name = "";
-                $scope.form.age = "";
                 $scope.form.zip = "";
                 $scope.form.condition = "";
+                $scope.form.email = "";
+                $scope.form.phone = "";
+                $scope.form.contactmethod = "";
             }
 
             function getUniqueId() {
@@ -134,16 +141,28 @@
             <h3>Enter new patient info:</h3>
             <form ng-submit="add()">
                 <div class="row">
-                    <div class="col-6"><input type="text" placeholder="Name" ng-model="form.name" size="30"/></div>
-                </div>
-                <div class="row">
-                    <div class="col-6"><input type="text" placeholder="Age" ng-model="form.age" size="30"/></div>
+                    <div class="col-6"><input type="text" placeholder="Patient Name" ng-model="form.name" size="30"/></div>
                 </div>
                 <div class="row">
                     <div class="col-6"><input type="text" placeholder="Zip" ng-model="form.zip" size="30"/></div>
                 </div>
                 <div class="row">
                     <div class="col-6"><input type="text" placeholder="Condition" ng-model="form.condition" size="30"/></div>
+                </div>
+                <div class="row">
+                    <div class="col-6"><input type="text" placeholder="Email" ng-model="form.email" size="30"/></div>
+                </div>
+                <div class="row">
+                    <div class="col-6"><input type="text" placeholder="Cell" ng-model="form.phone" size="30"/></div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <select ng-model="form.contactmethod">
+                            <option value="" [selected]="isSelected">Preferred contact method</option>
+                            <option value="PHONE">Phone</option>
+                            <option value="TEXT">Text</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-6">

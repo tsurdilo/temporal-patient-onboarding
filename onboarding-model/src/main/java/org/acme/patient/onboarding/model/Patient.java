@@ -11,10 +11,14 @@ public class Patient {
     private Hospital hospital;
     private Doctor doctor;
     private String onboarded;
+    private String phone;
+    private String email;
+    private ContactMethod contactMethod = ContactMethod.TEXT;
 
     public Patient() {}
 
-    public Patient(String id, String name, String age, String zip, String insurance, String insuranceId, String condition) {
+    public Patient(String id, String name, String age, String zip,
+                   String insurance, String insuranceId, String condition, String email, String phone, String contactMethod) {
         this.id = id;
         this.name = name;
         this.age = age;
@@ -22,6 +26,9 @@ public class Patient {
         this.insurance = insurance;
         this.insuranceId = insuranceId;
         this.condition = condition;
+        this.email = email;
+        this.phone = phone;
+        this.contactMethod = ContactMethod.valueOf(contactMethod);
     }
 
     public String getId() {
@@ -104,10 +111,35 @@ public class Patient {
         this.onboarded = onboarded;
     }
 
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public ContactMethod getContactMethod() {
+        return contactMethod;
+    }
+
+    public void setContactMethod(ContactMethod contactMethod) {
+        this.contactMethod = contactMethod;
+    }
+
     @Override
     public String toString() {
         return "Patient{" +
-                "name='" + name + '\'' +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
                 ", age='" + age + '\'' +
                 ", zip='" + zip + '\'' +
                 ", insurance='" + insurance + '\'' +
@@ -115,6 +147,10 @@ public class Patient {
                 ", condition='" + condition + '\'' +
                 ", hospital=" + hospital +
                 ", doctor=" + doctor +
+                ", onboarded='" + onboarded + '\'' +
+                ", phone='" + phone + '\'' +
+                ", email='" + email + '\'' +
+                ", contactMethod=" + contactMethod +
                 '}';
     }
 }
