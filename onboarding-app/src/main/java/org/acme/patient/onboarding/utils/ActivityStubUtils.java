@@ -3,22 +3,22 @@ package org.acme.patient.onboarding.utils;
 import io.temporal.activity.ActivityOptions;
 import io.temporal.common.RetryOptions;
 import io.temporal.workflow.Workflow;
-import org.acme.patient.onboarding.app.ServiceExecution;
+import org.acme.patient.onboarding.app.ServiceExecutor;
 
 import java.time.Duration;
 
 public class ActivityStubUtils {
-    public static ServiceExecution getActivitiesStub() {
+    public static ServiceExecutor getActivitiesStub() {
         return Workflow.newActivityStub(
-                ServiceExecution.class,
+                ServiceExecutor.class,
                 ActivityOptions.newBuilder()
                         .setStartToCloseTimeout(Duration.ofMinutes(1))
                         .build());
     }
 
-    public static ServiceExecution getActivitiesStubWithRetries() {
+    public static ServiceExecutor getActivitiesStubWithRetries() {
         return Workflow.newActivityStub(
-                ServiceExecution.class,
+                ServiceExecutor.class,
                 ActivityOptions.newBuilder()
                         .setRetryOptions(
                                 RetryOptions.newBuilder()

@@ -6,7 +6,7 @@ import io.temporal.client.WorkflowClient;
 import io.temporal.serviceclient.WorkflowServiceStubs;
 import io.temporal.worker.Worker;
 import io.temporal.worker.WorkerFactory;
-import org.acme.patient.onboarding.app.ServiceExecutionImpl;
+import org.acme.patient.onboarding.app.ServiceExecutorImpl;
 import org.acme.patient.onboarding.utils.OnboardingServiceClient;
 import org.acme.patient.onboarding.app.OnboardingImpl;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
@@ -36,7 +36,7 @@ public class WorkflowApplicationObserver {
         Worker worker = factory.newWorker(taskQueue);
 
         worker.registerWorkflowImplementationTypes(OnboardingImpl.class);
-        worker.registerActivitiesImplementations(new ServiceExecutionImpl(serviceClient));
+        worker.registerActivitiesImplementations(new ServiceExecutorImpl(serviceClient));
 
         factory.start();
     }

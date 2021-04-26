@@ -3,11 +3,11 @@ package org.acme.patient.onboarding.app;
 import org.acme.patient.onboarding.model.Patient;
 import org.acme.patient.onboarding.utils.OnboardingServiceClient;
 
-public class ServiceExecutionImpl implements ServiceExecution {
+public class ServiceExecutorImpl implements ServiceExecutor {
 
     private OnboardingServiceClient serviceClient;
 
-    public ServiceExecutionImpl(OnboardingServiceClient serviceClient) {
+    public ServiceExecutorImpl(OnboardingServiceClient serviceClient) {
         this.serviceClient = serviceClient;
     }
 

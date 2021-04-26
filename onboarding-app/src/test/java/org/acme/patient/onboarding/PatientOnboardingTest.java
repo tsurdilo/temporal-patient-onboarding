@@ -8,7 +8,7 @@ import io.temporal.client.WorkflowClient;
 import io.temporal.client.WorkflowOptions;
 import io.temporal.testing.TestWorkflowEnvironment;
 import io.temporal.worker.Worker;
-import org.acme.patient.onboarding.app.ServiceExecution;
+import org.acme.patient.onboarding.app.ServiceExecutor;
 import org.acme.patient.onboarding.model.Patient;
 import org.acme.patient.onboarding.app.Onboarding;
 import org.acme.patient.onboarding.app.OnboardingImpl;
@@ -39,7 +39,7 @@ public class PatientOnboardingTest {
     public void testMockedPatientOnboarding() {
 
         // mock our workflow activities
-        ServiceExecution activities = mock(ServiceExecution.class);
+        ServiceExecutor activities = mock(ServiceExecutor.class);
 
         Patient testPatient = new Patient("123", "Tester", "22", "30041", "", "", "Asthma");
         Patient onboardedPatient = new Patient("123", "Tester", "22", "30041", "", "", "Asthma");
