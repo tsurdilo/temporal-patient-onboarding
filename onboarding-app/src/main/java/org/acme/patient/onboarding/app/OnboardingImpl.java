@@ -3,7 +3,6 @@ package org.acme.patient.onboarding.app;
 import io.temporal.workflow.Saga;
 import org.acme.patient.onboarding.model.Patient;
 import org.acme.patient.onboarding.utils.ActivityStubUtils;
-import org.apache.commons.codec.binary.StringUtils;
 
 public class OnboardingImpl implements Onboarding {
 
@@ -33,7 +32,7 @@ public class OnboardingImpl implements Onboarding {
             onboardingPatient.setDoctor(
                     serviceExecutor.assignDoctorToPatient(onboardingPatient.getCondition()));
 
-            // 3. notify patient
+            // 3. notify patient with preferred contact method
             status = "Notifying patient: " + onboardingPatient.getName();
             switch (onboardingPatient.getContactMethod()) {
                 case PHONE:
