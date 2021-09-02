@@ -62,7 +62,7 @@
     <dependency>
       <groupId>io.temporal</groupId>
       <artifactId>temporal-sdk</artifactId>
-      <version>1.0.7</version>
+      <version>1.2.0</version>
     </dependency>
 
 
@@ -70,7 +70,7 @@
     <dependency>
       <groupId>io.temporal</groupId>
       <artifactId>temporal-testing</artifactId>
-      <version>1.0.7</version>
+      <version>1.2.0</version>
       <scope>test</scope>
     </dependency>
 

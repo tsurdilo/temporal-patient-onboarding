@@ -9,7 +9,6 @@ import io.temporal.testing.TestWorkflowEnvironment;
 import io.temporal.testing.WorkflowReplayer;
 import io.temporal.worker.Worker;
 import org.acme.patient.onboarding.app.ServiceExecutor;
-import org.acme.patient.onboarding.model.ContactMethod;
 import org.acme.patient.onboarding.model.Doctor;
 import org.acme.patient.onboarding.model.Hospital;
 import org.acme.patient.onboarding.model.Patient;
@@ -78,10 +77,10 @@ public class PatientOnboardingTest {
         Assertions.assertEquals("yes", resultPatient.getOnboarded());
     }
 
-    //@Test
+    @Test
     public void testOnboardingReplay() throws Exception {
         WorkflowReplayer.replayWorkflowExecutionFromResource(
-                "onboardingrunhistory.json", OnboardingImpl.class);
+                "testrun.json", OnboardingImpl.class);
     }
 
 
