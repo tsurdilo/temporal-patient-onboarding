@@ -1,13 +1,12 @@
 package org.acme.patient.onboarding.app;
 
-import io.temporal.workflow.Saga;
 import org.acme.patient.onboarding.model.Patient;
 import org.acme.patient.onboarding.utils.ActivityStubUtils;
 
 public class OnboardingImpl implements Onboarding {
 
-    ServiceExecutor serviceExecutor = ActivityStubUtils.getActivitiesStubWithRetries();
-    Saga saga = new Saga(new Saga.Options.Builder().setParallelCompensation(false).build());
+
+    ServiceExecutor serviceExecutor = ActivityStubUtils.getActivitiesStub();
 
     String status;
     Patient onboardingPatient;
@@ -15,11 +14,6 @@ public class OnboardingImpl implements Onboarding {
     @Override
     public Patient onboardNewPatient(Patient patient) {
         onboardingPatient = patient;
-
-        saga.addCompensation(() -> {
-            status = "Compensating Onboarding for: " + onboardingPatient.getName();
-            this.onboardingPatient =  serviceExecutor.compensateOnboarding(this.onboardingPatient);
-        });
 
         try {
             // 1. assign hospital to patient
@@ -50,7 +44,7 @@ public class OnboardingImpl implements Onboarding {
                     serviceExecutor.finalizeOnboarding());
 
         } catch (Exception e) {
-            saga.compensate();
+            patient.setOnboarded("no");
         }
 
         return onboardingPatient;
@@ -60,5 +54,5 @@ public class OnboardingImpl implements Onboarding {
     public String getStatus() {
         return status;
     }
-    
+
 }

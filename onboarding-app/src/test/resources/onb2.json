@@ -1,0 +1,3477 @@
+[
+  {
+    "eventTime": "2021-06-22T19:53:19.000Z",
+    "eventType": "WorkflowExecutionStarted",
+    "eventId": "1",
+    "details": {
+      "workflowType": {
+        "name": "Onboarding"
+      },
+      "parentWorkflowNamespace": "",
+      "parentWorkflowExecution": null,
+      "parentInitiatedEventId": "0",
+      "taskQueue": {
+        "name": "OnboardingTaskQueue",
+        "kind": "Normal"
+      },
+      "input": {
+        "payloads": [
+          "{id:80vo2g,name:asdasd,age:,zip:asdasd,insurance: ,insuranceId: ,condition:asdasd,hospital:null,doctor:null,onboarded:null,phone:asdasd,email:asdasd,contactMethod:PHONE}"
+        ]
+      },
+      "workflowExecutionTimeout": {
+        "duration": 0
+      },
+      "workflowRunTimeout": {
+        "duration": 0
+      },
+      "workflowTaskTimeout": {
+        "duration": 10
+      },
+      "continuedExecutionRunId": "",
+      "initiator": "Unspecified",
+      "continuedFailure": null,
+      "lastCompletionResult": null,
+      "originalExecutionRunId": "e4288b75-a521-489e-bb37-563e80a847cc",
+      "identity": "27288@Tihomirs-MBP",
+      "firstExecutionRunId": "e4288b75-a521-489e-bb37-563e80a847cc",
+      "retryPolicy": null,
+      "attempt": 1,
+      "workflowExecutionExpirationTime": null,
+      "cronSchedule": "",
+      "firstWorkflowTaskBackoff": {
+        "duration": 0
+      },
+      "memo": null,
+      "searchAttributes": null,
+      "prevAutoResetPoints": null,
+      "header": {
+        "fields": {}
+      },
+      "eventId": "1",
+      "eventType": "WorkflowExecutionStarted",
+      "kvps": [
+        {
+          "key": "eventTime",
+          "value": "Jun 22nd 3:53:19 pm"
+        },
+        {
+          "key": "eventId",
+          "value": "1"
+        },
+        {
+          "key": "workflowType.name",
+          "value": "Onboarding"
+        },
+        {
+          "key": "parentWorkflowNamespace",
+          "value": ""
+        },
+        {
+          "key": "parentInitiatedEventId",
+          "value": "0"
+        },
+        {
+          "key": "taskQueue.name",
+          "routeLink": {
+            "name": "task-queue",
+            "params": {
+              "taskQueue": "OnboardingTaskQueue"
+            }
+          },
+          "value": "OnboardingTaskQueue"
+        },
+        {
+          "key": "taskQueue.kind",
+          "value": "Normal"
+        },
+        {
+          "key": "input",
+          "value": [
+            "{id:80vo2g,name:asdasd,age:,zip:asdasd,insurance: ,insuranceId: ,condition:asdasd,hospital:null,doctor:null,onboarded:null,phone:asdasd,email:asdasd,contactMethod:PHONE}"
+          ]
+        },
+        {
+          "key": "workflowExecutionTimeout",
+          "value": ""
+        },
+        {
+          "key": "workflowRunTimeout",
+          "value": ""
+        },
+        {
+          "key": "workflowTaskTimeout",
+          "value": "10s"
+        },
+        {
+          "key": "continuedExecutionRunId",
+          "value": ""
+        },
+        {
+          "key": "initiator",
+          "value": "Unspecified"
+        },
+        {
+          "key": "originalExecutionRunId",
+          "value": "e4288b75-a521-489e-bb37-563e80a847cc"
+        },
+        {
+          "key": "identity",
+          "value": "27288@Tihomirs-MBP"
+        },
+        {
+          "key": "firstExecutionRunId",
+          "value": "e4288b75-a521-489e-bb37-563e80a847cc"
+        },
+        {
+          "key": "attempt",
+          "value": 1
+        },
+        {
+          "key": "cronSchedule",
+          "value": ""
+        },
+        {
+          "key": "firstWorkflowTaskBackoff",
+          "value": ""
+        }
+      ],
+      "eventTime": "Jun 22nd 3:53:19 pm"
+    },
+    "eventTimeDisplay": "Jun 22nd 3:53:19 pm",
+    "timeElapsedDisplay": "Jun 22nd 3:53:19 pm",
+    "eventSummary": {
+      "Close Timeout": "",
+      "identity": "27288@Tihomirs-MBP",
+      "input": {
+        "payloads": [
+          "{id:80vo2g,name:asdasd,age:,zip:asdasd,insurance: ,insuranceId: ,condition:asdasd,hospital:null,doctor:null,onboarded:null,phone:asdasd,email:asdasd,contactMethod:PHONE}"
+        ]
+      },
+      "Workflow": "Onboarding",
+      "eventId": "1",
+      "eventType": "WorkflowExecutionStarted",
+      "kvps": [
+        {
+          "key": "Close Timeout",
+          "value": ""
+        },
+        {
+          "key": "identity",
+          "value": "27288@Tihomirs-MBP"
+        },
+        {
+          "key": "input",
+          "value": [
+            "{id:80vo2g,name:asdasd,age:,zip:asdasd,insurance: ,insuranceId: ,condition:asdasd,hospital:null,doctor:null,onboarded:null,phone:asdasd,email:asdasd,contactMethod:PHONE}"
+          ]
+        },
+        {
+          "key": "Workflow",
+          "value": "Onboarding"
+        }
+      ]
+    },
+    "eventFullDetails": {
+      "workflowType": {
+        "name": "Onboarding"
+      },
+      "parentWorkflowNamespace": "",
+      "parentWorkflowExecution": null,
+      "parentInitiatedEventId": "0",
+      "taskQueue": {
+        "name": "OnboardingTaskQueue",
+        "kind": "Normal"
+      },
+      "input": {
+        "payloads": [
+          "{id:80vo2g,name:asdasd,age:,zip:asdasd,insurance: ,insuranceId: ,condition:asdasd,hospital:null,doctor:null,onboarded:null,phone:asdasd,email:asdasd,contactMethod:PHONE}"
+        ]
+      },
+      "workflowExecutionTimeout": {
+        "duration": 0
+      },
+      "workflowRunTimeout": {
+        "duration": 0
+      },
+      "workflowTaskTimeout": {
+        "duration": 10
+      },
+      "continuedExecutionRunId": "",
+      "initiator": "Unspecified",
+      "continuedFailure": null,
+      "lastCompletionResult": null,
+      "originalExecutionRunId": "e4288b75-a521-489e-bb37-563e80a847cc",
+      "identity": "27288@Tihomirs-MBP",
+      "firstExecutionRunId": "e4288b75-a521-489e-bb37-563e80a847cc",
+      "retryPolicy": null,
+      "attempt": 1,
+      "workflowExecutionExpirationTime": null,
+      "cronSchedule": "",
+      "firstWorkflowTaskBackoff": {
+        "duration": 0
+      },
+      "memo": null,
+      "searchAttributes": null,
+      "prevAutoResetPoints": null,
+      "header": {
+        "fields": {}
+      },
+      "eventId": "1",
+      "eventType": "WorkflowExecutionStarted",
+      "kvps": [
+        {
+          "key": "workflowType.name",
+          "value": "Onboarding"
+        },
+        {
+          "key": "parentWorkflowNamespace",
+          "value": ""
+        },
+        {
+          "key": "parentInitiatedEventId",
+          "value": "0"
+        },
+        {
+          "key": "taskQueue.name",
+          "routeLink": {
+            "name": "task-queue",
+            "params": {
+              "taskQueue": "OnboardingTaskQueue"
+            }
+          },
+          "value": "OnboardingTaskQueue"
+        },
+        {
+          "key": "taskQueue.kind",
+          "value": "Normal"
+        },
+        {
+          "key": "input",
+          "value": [
+            "{id:80vo2g,name:asdasd,age:,zip:asdasd,insurance: ,insuranceId: ,condition:asdasd,hospital:null,doctor:null,onboarded:null,phone:asdasd,email:asdasd,contactMethod:PHONE}"
+          ]
+        },
+        {
+          "key": "workflowExecutionTimeout",
+          "value": ""
+        },
+        {
+          "key": "workflowRunTimeout",
+          "value": ""
+        },
+        {
+          "key": "workflowTaskTimeout",
+          "value": "10s"
+        },
+        {
+          "key": "continuedExecutionRunId",
+          "value": ""
+        },
+        {
+          "key": "initiator",
+          "value": "Unspecified"
+        },
+        {
+          "key": "originalExecutionRunId",
+          "value": "e4288b75-a521-489e-bb37-563e80a847cc"
+        },
+        {
+          "key": "identity",
+          "value": "27288@Tihomirs-MBP"
+        },
+        {
+          "key": "firstExecutionRunId",
+          "value": "e4288b75-a521-489e-bb37-563e80a847cc"
+        },
+        {
+          "key": "attempt",
+          "value": 1
+        },
+        {
+          "key": "cronSchedule",
+          "value": ""
+        },
+        {
+          "key": "firstWorkflowTaskBackoff",
+          "value": ""
+        }
+      ]
+    }
+  },
+  {
+    "eventTime": "2021-06-22T19:53:19.000Z",
+    "eventType": "WorkflowTaskScheduled",
+    "eventId": "2",
+    "details": {
+      "taskQueue": {
+        "name": "OnboardingTaskQueue",
+        "kind": "Normal"
+      },
+      "startToCloseTimeout": {
+        "duration": 10
+      },
+      "attempt": 1,
+      "eventId": "2",
+      "eventType": "WorkflowTaskScheduled",
+      "kvps": [
+        {
+          "key": "eventTime",
+          "value": "Jun 22nd 3:53:19 pm"
+        },
+        {
+          "key": "eventId",
+          "value": "2"
+        },
+        {
+          "key": "taskQueue.name",
+          "routeLink": {
+            "name": "task-queue",
+            "params": {
+              "taskQueue": "OnboardingTaskQueue"
+            }
+          },
+          "value": "OnboardingTaskQueue"
+        },
+        {
+          "key": "taskQueue.kind",
+          "value": "Normal"
+        },
+        {
+          "key": "startToCloseTimeout",
+          "value": "10s"
+        },
+        {
+          "key": "attempt",
+          "value": 1
+        }
+      ],
+      "eventTime": "Jun 22nd 3:53:19 pm"
+    },
+    "eventTimeDisplay": "Jun 22nd 3:53:19 pm",
+    "timeElapsedDisplay": "",
+    "eventSummary": {
+      "Taskqueue": "OnboardingTaskQueue",
+      "Timeout": "10s",
+      "eventId": "2",
+      "eventType": "WorkflowTaskScheduled",
+      "kvps": [
+        {
+          "key": "Taskqueue",
+          "routeLink": {
+            "name": "task-queue",
+            "params": {
+              "taskQueue": "OnboardingTaskQueue"
+            }
+          },
+          "value": "OnboardingTaskQueue"
+        },
+        {
+          "key": "Timeout",
+          "value": "10s"
+        }
+      ]
+    },
+    "eventFullDetails": {
+      "taskQueue": {
+        "name": "OnboardingTaskQueue",
+        "kind": "Normal"
+      },
+      "startToCloseTimeout": {
+        "duration": 10
+      },
+      "attempt": 1,
+      "eventId": "2",
+      "eventType": "WorkflowTaskScheduled",
+      "kvps": [
+        {
+          "key": "taskQueue.name",
+          "routeLink": {
+            "name": "task-queue",
+            "params": {
+              "taskQueue": "OnboardingTaskQueue"
+            }
+          },
+          "value": "OnboardingTaskQueue"
+        },
+        {
+          "key": "taskQueue.kind",
+          "value": "Normal"
+        },
+        {
+          "key": "startToCloseTimeout",
+          "value": "10s"
+        },
+        {
+          "key": "attempt",
+          "value": 1
+        }
+      ]
+    }
+  },
+  {
+    "eventTime": "2021-06-22T19:53:19.000Z",
+    "eventType": "WorkflowTaskStarted",
+    "eventId": "3",
+    "details": {
+      "scheduledEventId": "2",
+      "identity": "27288@Tihomirs-MBP",
+      "requestId": "8b25d8e5-d7a4-41b4-88a9-4c7f84e053df",
+      "eventId": "3",
+      "eventType": "WorkflowTaskStarted",
+      "kvps": [
+        {
+          "key": "eventTime",
+          "value": "Jun 22nd 3:53:19 pm"
+        },
+        {
+          "key": "eventId",
+          "value": "3"
+        },
+        {
+          "key": "scheduledEventId",
+          "value": "2"
+        },
+        {
+          "key": "identity",
+          "value": "27288@Tihomirs-MBP"
+        },
+        {
+          "key": "requestId",
+          "value": "8b25d8e5-d7a4-41b4-88a9-4c7f84e053df"
+        }
+      ],
+      "eventTime": "Jun 22nd 3:53:19 pm"
+    },
+    "eventTimeDisplay": "Jun 22nd 3:53:19 pm",
+    "timeElapsedDisplay": "",
+    "eventSummary": {
+      "requestId": "8b25d8e5-d7a4-41b4-88a9-4c7f84e053df",
+      "eventId": "3",
+      "eventType": "WorkflowTaskStarted",
+      "kvps": [
+        {
+          "key": "requestId",
+          "value": "8b25d8e5-d7a4-41b4-88a9-4c7f84e053df"
+        }
+      ]
+    },
+    "eventFullDetails": {
+      "scheduledEventId": "2",
+      "identity": "27288@Tihomirs-MBP",
+      "requestId": "8b25d8e5-d7a4-41b4-88a9-4c7f84e053df",
+      "eventId": "3",
+      "eventType": "WorkflowTaskStarted",
+      "kvps": [
+        {
+          "key": "scheduledEventId",
+          "value": "2"
+        },
+        {
+          "key": "identity",
+          "value": "27288@Tihomirs-MBP"
+        },
+        {
+          "key": "requestId",
+          "value": "8b25d8e5-d7a4-41b4-88a9-4c7f84e053df"
+        }
+      ]
+    }
+  },
+  {
+    "eventTime": "2021-06-22T19:53:19.000Z",
+    "eventType": "WorkflowTaskCompleted",
+    "eventId": "4",
+    "details": {
+      "scheduledEventId": "2",
+      "startedEventId": "3",
+      "identity": "27288@Tihomirs-MBP",
+      "binaryChecksum": "",
+      "eventId": "4",
+      "eventType": "WorkflowTaskCompleted",
+      "kvps": [
+        {
+          "key": "eventTime",
+          "value": "Jun 22nd 3:53:19 pm"
+        },
+        {
+          "key": "eventId",
+          "value": "4"
+        },
+        {
+          "key": "scheduledEventId",
+          "value": "2"
+        },
+        {
+          "key": "startedEventId",
+          "value": "3"
+        },
+        {
+          "key": "identity",
+          "value": "27288@Tihomirs-MBP"
+        },
+        {
+          "key": "binaryChecksum",
+          "value": ""
+        }
+      ],
+      "eventTime": "Jun 22nd 3:53:19 pm"
+    },
+    "eventTimeDisplay": "Jun 22nd 3:53:19 pm",
+    "timeElapsedDisplay": "",
+    "eventSummary": {
+      "identity": "27288@Tihomirs-MBP",
+      "eventId": "4",
+      "eventType": "WorkflowTaskCompleted",
+      "kvps": [
+        {
+          "key": "identity",
+          "value": "27288@Tihomirs-MBP"
+        }
+      ]
+    },
+    "eventFullDetails": {
+      "scheduledEventId": "2",
+      "startedEventId": "3",
+      "identity": "27288@Tihomirs-MBP",
+      "binaryChecksum": "",
+      "eventId": "4",
+      "eventType": "WorkflowTaskCompleted",
+      "kvps": [
+        {
+          "key": "scheduledEventId",
+          "value": "2"
+        },
+        {
+          "key": "startedEventId",
+          "value": "3"
+        },
+        {
+          "key": "identity",
+          "value": "27288@Tihomirs-MBP"
+        },
+        {
+          "key": "binaryChecksum",
+          "value": ""
+        }
+      ]
+    }
+  },
+  {
+    "eventTime": "2021-06-22T19:53:19.000Z",
+    "eventType": "ActivityTaskScheduled",
+    "eventId": "5",
+    "details": {
+      "activityId": "c1c512ef-4e2b-3349-b497-d6a5056f6636",
+      "activityType": {
+        "name": "AssignHospitalToPatient"
+      },
+      "namespace": "",
+      "taskQueue": {
+        "name": "OnboardingTaskQueue",
+        "kind": "Normal"
+      },
+      "header": {
+        "fields": {}
+      },
+      "input": {
+        "payloads": [
+          "asdasd"
+        ]
+      },
+      "scheduleToCloseTimeout": {
+        "duration": 60
+      },
+      "scheduleToStartTimeout": {
+        "duration": 60
+      },
+      "startToCloseTimeout": {
+        "duration": 60
+      },
+      "heartbeatTimeout": {
+        "duration": 0
+      },
+      "workflowTaskCompletedEventId": "4",
+      "retryPolicy": {
+        "nonRetryableErrorTypes": [],
+        "initialInterval": {
+          "duration": 1
+        },
+        "backoffCoefficient": 2,
+        "maximumInterval": {
+          "duration": 100
+        },
+        "maximumAttempts": 0
+      },
+      "eventId": "5",
+      "eventType": "ActivityTaskScheduled",
+      "kvps": [
+        {
+          "key": "eventTime",
+          "value": "Jun 22nd 3:53:19 pm"
+        },
+        {
+          "key": "eventId",
+          "value": "5"
+        },
+        {
+          "key": "activityId",
+          "value": "c1c512ef-4e2b-3349-b497-d6a5056f6636"
+        },
+        {
+          "key": "activityType.name",
+          "value": "AssignHospitalToPatient"
+        },
+        {
+          "key": "namespace",
+          "value": ""
+        },
+        {
+          "key": "taskQueue.name",
+          "routeLink": {
+            "name": "task-queue",
+            "params": {
+              "taskQueue": "OnboardingTaskQueue"
+            }
+          },
+          "value": "OnboardingTaskQueue"
+        },
+        {
+          "key": "taskQueue.kind",
+          "value": "Normal"
+        },
+        {
+          "key": "input",
+          "value": [
+            "asdasd"
+          ]
+        },
+        {
+          "key": "scheduleToCloseTimeout",
+          "value": "1m"
+        },
+        {
+          "key": "scheduleToStartTimeout",
+          "value": "1m"
+        },
+        {
+          "key": "startToCloseTimeout",
+          "value": "1m"
+        },
+        {
+          "key": "heartbeatTimeout",
+          "value": ""
+        },
+        {
+          "key": "workflowTaskCompletedEventId",
+          "value": "4"
+        },
+        {
+          "key": "retryPolicy.initialInterval",
+          "value": "1s"
+        },
+        {
+          "key": "retryPolicy.backoffCoefficient",
+          "value": 2
+        },
+        {
+          "key": "retryPolicy.maximumInterval",
+          "value": "1m 40s"
+        },
+        {
+          "key": "retryPolicy.maximumAttempts",
+          "value": 0
+        }
+      ],
+      "eventTime": "Jun 22nd 3:53:19 pm"
+    },
+    "eventTimeDisplay": "Jun 22nd 3:53:19 pm",
+    "timeElapsedDisplay": "",
+    "eventSummary": {
+      "Close Timeout": "1m",
+      "Id": "c1c512ef-4e2b-3349-b497-d6a5056f6636",
+      "input": {
+        "payloads": [
+          "asdasd"
+        ]
+      },
+      "Name": "AssignHospitalToPatient",
+      "eventId": "5",
+      "eventType": "ActivityTaskScheduled",
+      "kvps": [
+        {
+          "key": "Close Timeout",
+          "value": "1m"
+        },
+        {
+          "key": "Id",
+          "value": "c1c512ef-4e2b-3349-b497-d6a5056f6636"
+        },
+        {
+          "key": "input",
+          "value": [
+            "asdasd"
+          ]
+        },
+        {
+          "key": "Name",
+          "value": "AssignHospitalToPatient"
+        }
+      ]
+    },
+    "eventFullDetails": {
+      "activityId": "c1c512ef-4e2b-3349-b497-d6a5056f6636",
+      "activityType": {
+        "name": "AssignHospitalToPatient"
+      },
+      "namespace": "",
+      "taskQueue": {
+        "name": "OnboardingTaskQueue",
+        "kind": "Normal"
+      },
+      "header": {
+        "fields": {}
+      },
+      "input": {
+        "payloads": [
+          "asdasd"
+        ]
+      },
+      "scheduleToCloseTimeout": {
+        "duration": 60
+      },
+      "scheduleToStartTimeout": {
+        "duration": 60
+      },
+      "startToCloseTimeout": {
+        "duration": 60
+      },
+      "heartbeatTimeout": {
+        "duration": 0
+      },
+      "workflowTaskCompletedEventId": "4",
+      "retryPolicy": {
+        "nonRetryableErrorTypes": [],
+        "initialInterval": {
+          "duration": 1
+        },
+        "backoffCoefficient": 2,
+        "maximumInterval": {
+          "duration": 100
+        },
+        "maximumAttempts": 0
+      },
+      "eventId": "5",
+      "eventType": "ActivityTaskScheduled",
+      "kvps": [
+        {
+          "key": "activityId",
+          "value": "c1c512ef-4e2b-3349-b497-d6a5056f6636"
+        },
+        {
+          "key": "activityType.name",
+          "value": "AssignHospitalToPatient"
+        },
+        {
+          "key": "namespace",
+          "value": ""
+        },
+        {
+          "key": "taskQueue.name",
+          "routeLink": {
+            "name": "task-queue",
+            "params": {
+              "taskQueue": "OnboardingTaskQueue"
+            }
+          },
+          "value": "OnboardingTaskQueue"
+        },
+        {
+          "key": "taskQueue.kind",
+          "value": "Normal"
+        },
+        {
+          "key": "input",
+          "value": [
+            "asdasd"
+          ]
+        },
+        {
+          "key": "scheduleToCloseTimeout",
+          "value": "1m"
+        },
+        {
+          "key": "scheduleToStartTimeout",
+          "value": "1m"
+        },
+        {
+          "key": "startToCloseTimeout",
+          "value": "1m"
+        },
+        {
+          "key": "heartbeatTimeout",
+          "value": ""
+        },
+        {
+          "key": "workflowTaskCompletedEventId",
+          "value": "4"
+        },
+        {
+          "key": "retryPolicy.initialInterval",
+          "value": "1s"
+        },
+        {
+          "key": "retryPolicy.backoffCoefficient",
+          "value": 2
+        },
+        {
+          "key": "retryPolicy.maximumInterval",
+          "value": "1m 40s"
+        },
+        {
+          "key": "retryPolicy.maximumAttempts",
+          "value": 0
+        }
+      ]
+    }
+  },
+  {
+    "eventTime": "2021-06-22T19:53:19.000Z",
+    "eventType": "ActivityTaskStarted",
+    "eventId": "6",
+    "details": {
+      "scheduledEventId": "5",
+      "identity": "27288@Tihomirs-MBP",
+      "requestId": "aa7e2369-0baa-4761-8c17-0b7960198891",
+      "attempt": 1,
+      "lastFailure": null,
+      "eventId": "6",
+      "eventType": "ActivityTaskStarted",
+      "kvps": [
+        {
+          "key": "eventTime",
+          "value": "Jun 22nd 3:53:19 pm"
+        },
+        {
+          "key": "eventId",
+          "value": "6"
+        },
+        {
+          "key": "scheduledEventId",
+          "value": "5"
+        },
+        {
+          "key": "identity",
+          "value": "27288@Tihomirs-MBP"
+        },
+        {
+          "key": "requestId",
+          "value": "aa7e2369-0baa-4761-8c17-0b7960198891"
+        },
+        {
+          "key": "attempt",
+          "value": 1
+        }
+      ],
+      "eventTime": "Jun 22nd 3:53:19 pm"
+    },
+    "eventTimeDisplay": "Jun 22nd 3:53:19 pm",
+    "timeElapsedDisplay": "",
+    "eventSummary": {
+      "attempt": 1,
+      "identity": "27288@Tihomirs-MBP",
+      "requestId": "aa7e2369-0baa-4761-8c17-0b7960198891",
+      "eventId": "6",
+      "eventType": "ActivityTaskStarted",
+      "kvps": [
+        {
+          "key": "attempt",
+          "value": 1
+        },
+        {
+          "key": "identity",
+          "value": "27288@Tihomirs-MBP"
+        },
+        {
+          "key": "requestId",
+          "value": "aa7e2369-0baa-4761-8c17-0b7960198891"
+        }
+      ]
+    },
+    "eventFullDetails": {
+      "scheduledEventId": "5",
+      "identity": "27288@Tihomirs-MBP",
+      "requestId": "aa7e2369-0baa-4761-8c17-0b7960198891",
+      "attempt": 1,
+      "lastFailure": null,
+      "eventId": "6",
+      "eventType": "ActivityTaskStarted",
+      "kvps": [
+        {
+          "key": "scheduledEventId",
+          "value": "5"
+        },
+        {
+          "key": "identity",
+          "value": "27288@Tihomirs-MBP"
+        },
+        {
+          "key": "requestId",
+          "value": "aa7e2369-0baa-4761-8c17-0b7960198891"
+        },
+        {
+          "key": "attempt",
+          "value": 1
+        }
+      ]
+    }
+  },
+  {
+    "eventTime": "2021-06-22T19:53:24.000Z",
+    "eventType": "ActivityTaskCompleted",
+    "eventId": "7",
+    "details": {
+      "result": {
+        "payloads": [
+          "{name:Local Hospital,address:123 Local Street,phone:555-55-5555,zip:12345}"
+        ]
+      },
+      "scheduledEventId": "5",
+      "startedEventId": "6",
+      "identity": "27288@Tihomirs-MBP",
+      "eventId": "7",
+      "eventType": "ActivityTaskCompleted",
+      "kvps": [
+        {
+          "key": "eventTime",
+          "value": "Jun 22nd 3:53:24 pm"
+        },
+        {
+          "key": "eventId",
+          "value": "7"
+        },
+        {
+          "key": "result",
+          "value": [
+            "{name:Local Hospital,address:123 Local Street,phone:555-55-5555,zip:12345}"
+          ]
+        },
+        {
+          "key": "scheduledEventId",
+          "value": "5"
+        },
+        {
+          "key": "startedEventId",
+          "value": "6"
+        },
+        {
+          "key": "identity",
+          "value": "27288@Tihomirs-MBP"
+        }
+      ],
+      "eventTime": "Jun 22nd 3:53:24 pm"
+    },
+    "eventTimeDisplay": "Jun 22nd 3:53:24 pm",
+    "timeElapsedDisplay": "5s (+5s)",
+    "eventSummary": {
+      "result": {
+        "payloads": [
+          "{name:Local Hospital,address:123 Local Street,phone:555-55-5555,zip:12345}"
+        ]
+      },
+      "eventId": "7",
+      "eventType": "ActivityTaskCompleted",
+      "kvps": [
+        {
+          "key": "result",
+          "value": [
+            "{name:Local Hospital,address:123 Local Street,phone:555-55-5555,zip:12345}"
+          ]
+        }
+      ]
+    },
+    "eventFullDetails": {
+      "result": {
+        "payloads": [
+          "{name:Local Hospital,address:123 Local Street,phone:555-55-5555,zip:12345}"
+        ]
+      },
+      "scheduledEventId": "5",
+      "startedEventId": "6",
+      "identity": "27288@Tihomirs-MBP",
+      "eventId": "7",
+      "eventType": "ActivityTaskCompleted",
+      "kvps": [
+        {
+          "key": "result",
+          "value": [
+            "{name:Local Hospital,address:123 Local Street,phone:555-55-5555,zip:12345}"
+          ]
+        },
+        {
+          "key": "scheduledEventId",
+          "value": "5"
+        },
+        {
+          "key": "startedEventId",
+          "value": "6"
+        },
+        {
+          "key": "identity",
+          "value": "27288@Tihomirs-MBP"
+        }
+      ]
+    }
+  },
+  {
+    "eventTime": "2021-06-22T19:53:24.000Z",
+    "eventType": "WorkflowTaskScheduled",
+    "eventId": "8",
+    "details": {
+      "taskQueue": {
+        "name": "27288@Tihomirs-MBP:adb5d5ab-5481-4f39-be68-45feac62b9e3",
+        "kind": "Sticky"
+      },
+      "startToCloseTimeout": {
+        "duration": 10
+      },
+      "attempt": 1,
+      "eventId": "8",
+      "eventType": "WorkflowTaskScheduled",
+      "kvps": [
+        {
+          "key": "eventTime",
+          "value": "Jun 22nd 3:53:24 pm"
+        },
+        {
+          "key": "eventId",
+          "value": "8"
+        },
+        {
+          "key": "taskQueue.name",
+          "routeLink": {
+            "name": "task-queue",
+            "params": {
+              "taskQueue": "27288@Tihomirs-MBP:adb5d5ab-5481-4f39-be68-45feac62b9e3"
+            }
+          },
+          "value": "27288@Tihomirs-MBP:adb5d5ab-5481-4f39-be68-45feac62b9e3"
+        },
+        {
+          "key": "taskQueue.kind",
+          "value": "Sticky"
+        },
+        {
+          "key": "startToCloseTimeout",
+          "value": "10s"
+        },
+        {
+          "key": "attempt",
+          "value": 1
+        }
+      ],
+      "eventTime": "Jun 22nd 3:53:24 pm"
+    },
+    "eventTimeDisplay": "Jun 22nd 3:53:24 pm",
+    "timeElapsedDisplay": "5s",
+    "eventSummary": {
+      "Taskqueue": "27288@Tihomirs-MBP:adb5d5ab-5481-4f39-be68-45feac62b9e3",
+      "Timeout": "10s",
+      "eventId": "8",
+      "eventType": "WorkflowTaskScheduled",
+      "kvps": [
+        {
+          "key": "Taskqueue",
+          "routeLink": {
+            "name": "task-queue",
+            "params": {
+              "taskQueue": "27288@Tihomirs-MBP:adb5d5ab-5481-4f39-be68-45feac62b9e3"
+            }
+          },
+          "value": "27288@Tihomirs-MBP:adb5d5ab-5481-4f39-be68-45feac62b9e3"
+        },
+        {
+          "key": "Timeout",
+          "value": "10s"
+        }
+      ]
+    },
+    "eventFullDetails": {
+      "taskQueue": {
+        "name": "27288@Tihomirs-MBP:adb5d5ab-5481-4f39-be68-45feac62b9e3",
+        "kind": "Sticky"
+      },
+      "startToCloseTimeout": {
+        "duration": 10
+      },
+      "attempt": 1,
+      "eventId": "8",
+      "eventType": "WorkflowTaskScheduled",
+      "kvps": [
+        {
+          "key": "taskQueue.name",
+          "routeLink": {
+            "name": "task-queue",
+            "params": {
+              "taskQueue": "27288@Tihomirs-MBP:adb5d5ab-5481-4f39-be68-45feac62b9e3"
+            }
+          },
+          "value": "27288@Tihomirs-MBP:adb5d5ab-5481-4f39-be68-45feac62b9e3"
+        },
+        {
+          "key": "taskQueue.kind",
+          "value": "Sticky"
+        },
+        {
+          "key": "startToCloseTimeout",
+          "value": "10s"
+        },
+        {
+          "key": "attempt",
+          "value": 1
+        }
+      ]
+    }
+  },
+  {
+    "eventTime": "2021-06-22T19:53:24.000Z",
+    "eventType": "WorkflowTaskStarted",
+    "eventId": "9",
+    "details": {
+      "scheduledEventId": "8",
+      "identity": "adb5d5ab-5481-4f39-be68-45feac62b9e3",
+      "requestId": "5619b2f4-92a8-4479-ba62-3ffe9c198d86",
+      "eventId": "9",
+      "eventType": "WorkflowTaskStarted",
+      "kvps": [
+        {
+          "key": "eventTime",
+          "value": "Jun 22nd 3:53:24 pm"
+        },
+        {
+          "key": "eventId",
+          "value": "9"
+        },
+        {
+          "key": "scheduledEventId",
+          "value": "8"
+        },
+        {
+          "key": "identity",
+          "value": "adb5d5ab-5481-4f39-be68-45feac62b9e3"
+        },
+        {
+          "key": "requestId",
+          "value": "5619b2f4-92a8-4479-ba62-3ffe9c198d86"
+        }
+      ],
+      "eventTime": "Jun 22nd 3:53:24 pm"
+    },
+    "eventTimeDisplay": "Jun 22nd 3:53:24 pm",
+    "timeElapsedDisplay": "5s",
+    "eventSummary": {
+      "requestId": "5619b2f4-92a8-4479-ba62-3ffe9c198d86",
+      "eventId": "9",
+      "eventType": "WorkflowTaskStarted",
+      "kvps": [
+        {
+          "key": "requestId",
+          "value": "5619b2f4-92a8-4479-ba62-3ffe9c198d86"
+        }
+      ]
+    },
+    "eventFullDetails": {
+      "scheduledEventId": "8",
+      "identity": "adb5d5ab-5481-4f39-be68-45feac62b9e3",
+      "requestId": "5619b2f4-92a8-4479-ba62-3ffe9c198d86",
+      "eventId": "9",
+      "eventType": "WorkflowTaskStarted",
+      "kvps": [
+        {
+          "key": "scheduledEventId",
+          "value": "8"
+        },
+        {
+          "key": "identity",
+          "value": "adb5d5ab-5481-4f39-be68-45feac62b9e3"
+        },
+        {
+          "key": "requestId",
+          "value": "5619b2f4-92a8-4479-ba62-3ffe9c198d86"
+        }
+      ]
+    }
+  },
+  {
+    "eventTime": "2021-06-22T19:53:24.000Z",
+    "eventType": "WorkflowTaskCompleted",
+    "eventId": "10",
+    "details": {
+      "scheduledEventId": "8",
+      "startedEventId": "9",
+      "identity": "27288@Tihomirs-MBP",
+      "binaryChecksum": "",
+      "eventId": "10",
+      "eventType": "WorkflowTaskCompleted",
+      "kvps": [
+        {
+          "key": "eventTime",
+          "value": "Jun 22nd 3:53:24 pm"
+        },
+        {
+          "key": "eventId",
+          "value": "10"
+        },
+        {
+          "key": "scheduledEventId",
+          "value": "8"
+        },
+        {
+          "key": "startedEventId",
+          "value": "9"
+        },
+        {
+          "key": "identity",
+          "value": "27288@Tihomirs-MBP"
+        },
+        {
+          "key": "binaryChecksum",
+          "value": ""
+        }
+      ],
+      "eventTime": "Jun 22nd 3:53:24 pm"
+    },
+    "eventTimeDisplay": "Jun 22nd 3:53:24 pm",
+    "timeElapsedDisplay": "5s",
+    "eventSummary": {
+      "identity": "27288@Tihomirs-MBP",
+      "eventId": "10",
+      "eventType": "WorkflowTaskCompleted",
+      "kvps": [
+        {
+          "key": "identity",
+          "value": "27288@Tihomirs-MBP"
+        }
+      ]
+    },
+    "eventFullDetails": {
+      "scheduledEventId": "8",
+      "startedEventId": "9",
+      "identity": "27288@Tihomirs-MBP",
+      "binaryChecksum": "",
+      "eventId": "10",
+      "eventType": "WorkflowTaskCompleted",
+      "kvps": [
+        {
+          "key": "scheduledEventId",
+          "value": "8"
+        },
+        {
+          "key": "startedEventId",
+          "value": "9"
+        },
+        {
+          "key": "identity",
+          "value": "27288@Tihomirs-MBP"
+        },
+        {
+          "key": "binaryChecksum",
+          "value": ""
+        }
+      ]
+    }
+  },
+  {
+    "eventTime": "2021-06-22T19:53:24.000Z",
+    "eventType": "ActivityTaskScheduled",
+    "eventId": "11",
+    "details": {
+      "activityId": "777c3598-22e2-3dc2-afac-c4c7ca1e8aea",
+      "activityType": {
+        "name": "AssignDoctorToPatient"
+      },
+      "namespace": "",
+      "taskQueue": {
+        "name": "OnboardingTaskQueue",
+        "kind": "Normal"
+      },
+      "header": {
+        "fields": {}
+      },
+      "input": {
+        "payloads": [
+          "asdasd"
+        ]
+      },
+      "scheduleToCloseTimeout": {
+        "duration": 60
+      },
+      "scheduleToStartTimeout": {
+        "duration": 60
+      },
+      "startToCloseTimeout": {
+        "duration": 60
+      },
+      "heartbeatTimeout": {
+        "duration": 0
+      },
+      "workflowTaskCompletedEventId": "10",
+      "retryPolicy": {
+        "nonRetryableErrorTypes": [],
+        "initialInterval": {
+          "duration": 1
+        },
+        "backoffCoefficient": 2,
+        "maximumInterval": {
+          "duration": 100
+        },
+        "maximumAttempts": 0
+      },
+      "eventId": "11",
+      "eventType": "ActivityTaskScheduled",
+      "kvps": [
+        {
+          "key": "eventTime",
+          "value": "Jun 22nd 3:53:24 pm"
+        },
+        {
+          "key": "eventId",
+          "value": "11"
+        },
+        {
+          "key": "activityId",
+          "value": "777c3598-22e2-3dc2-afac-c4c7ca1e8aea"
+        },
+        {
+          "key": "activityType.name",
+          "value": "AssignDoctorToPatient"
+        },
+        {
+          "key": "namespace",
+          "value": ""
+        },
+        {
+          "key": "taskQueue.name",
+          "routeLink": {
+            "name": "task-queue",
+            "params": {
+              "taskQueue": "OnboardingTaskQueue"
+            }
+          },
+          "value": "OnboardingTaskQueue"
+        },
+        {
+          "key": "taskQueue.kind",
+          "value": "Normal"
+        },
+        {
+          "key": "input",
+          "value": [
+            "asdasd"
+          ]
+        },
+        {
+          "key": "scheduleToCloseTimeout",
+          "value": "1m"
+        },
+        {
+          "key": "scheduleToStartTimeout",
+          "value": "1m"
+        },
+        {
+          "key": "startToCloseTimeout",
+          "value": "1m"
+        },
+        {
+          "key": "heartbeatTimeout",
+          "value": ""
+        },
+        {
+          "key": "workflowTaskCompletedEventId",
+          "value": "10"
+        },
+        {
+          "key": "retryPolicy.initialInterval",
+          "value": "1s"
+        },
+        {
+          "key": "retryPolicy.backoffCoefficient",
+          "value": 2
+        },
+        {
+          "key": "retryPolicy.maximumInterval",
+          "value": "1m 40s"
+        },
+        {
+          "key": "retryPolicy.maximumAttempts",
+          "value": 0
+        }
+      ],
+      "eventTime": "Jun 22nd 3:53:24 pm"
+    },
+    "eventTimeDisplay": "Jun 22nd 3:53:24 pm",
+    "timeElapsedDisplay": "5s",
+    "eventSummary": {
+      "Close Timeout": "1m",
+      "Id": "777c3598-22e2-3dc2-afac-c4c7ca1e8aea",
+      "input": {
+        "payloads": [
+          "asdasd"
+        ]
+      },
+      "Name": "AssignDoctorToPatient",
+      "eventId": "11",
+      "eventType": "ActivityTaskScheduled",
+      "kvps": [
+        {
+          "key": "Close Timeout",
+          "value": "1m"
+        },
+        {
+          "key": "Id",
+          "value": "777c3598-22e2-3dc2-afac-c4c7ca1e8aea"
+        },
+        {
+          "key": "input",
+          "value": [
+            "asdasd"
+          ]
+        },
+        {
+          "key": "Name",
+          "value": "AssignDoctorToPatient"
+        }
+      ]
+    },
+    "eventFullDetails": {
+      "activityId": "777c3598-22e2-3dc2-afac-c4c7ca1e8aea",
+      "activityType": {
+        "name": "AssignDoctorToPatient"
+      },
+      "namespace": "",
+      "taskQueue": {
+        "name": "OnboardingTaskQueue",
+        "kind": "Normal"
+      },
+      "header": {
+        "fields": {}
+      },
+      "input": {
+        "payloads": [
+          "asdasd"
+        ]
+      },
+      "scheduleToCloseTimeout": {
+        "duration": 60
+      },
+      "scheduleToStartTimeout": {
+        "duration": 60
+      },
+      "startToCloseTimeout": {
+        "duration": 60
+      },
+      "heartbeatTimeout": {
+        "duration": 0
+      },
+      "workflowTaskCompletedEventId": "10",
+      "retryPolicy": {
+        "nonRetryableErrorTypes": [],
+        "initialInterval": {
+          "duration": 1
+        },
+        "backoffCoefficient": 2,
+        "maximumInterval": {
+          "duration": 100
+        },
+        "maximumAttempts": 0
+      },
+      "eventId": "11",
+      "eventType": "ActivityTaskScheduled",
+      "kvps": [
+        {
+          "key": "activityId",
+          "value": "777c3598-22e2-3dc2-afac-c4c7ca1e8aea"
+        },
+        {
+          "key": "activityType.name",
+          "value": "AssignDoctorToPatient"
+        },
+        {
+          "key": "namespace",
+          "value": ""
+        },
+        {
+          "key": "taskQueue.name",
+          "routeLink": {
+            "name": "task-queue",
+            "params": {
+              "taskQueue": "OnboardingTaskQueue"
+            }
+          },
+          "value": "OnboardingTaskQueue"
+        },
+        {
+          "key": "taskQueue.kind",
+          "value": "Normal"
+        },
+        {
+          "key": "input",
+          "value": [
+            "asdasd"
+          ]
+        },
+        {
+          "key": "scheduleToCloseTimeout",
+          "value": "1m"
+        },
+        {
+          "key": "scheduleToStartTimeout",
+          "value": "1m"
+        },
+        {
+          "key": "startToCloseTimeout",
+          "value": "1m"
+        },
+        {
+          "key": "heartbeatTimeout",
+          "value": ""
+        },
+        {
+          "key": "workflowTaskCompletedEventId",
+          "value": "10"
+        },
+        {
+          "key": "retryPolicy.initialInterval",
+          "value": "1s"
+        },
+        {
+          "key": "retryPolicy.backoffCoefficient",
+          "value": 2
+        },
+        {
+          "key": "retryPolicy.maximumInterval",
+          "value": "1m 40s"
+        },
+        {
+          "key": "retryPolicy.maximumAttempts",
+          "value": 0
+        }
+      ]
+    }
+  },
+  {
+    "eventTime": "2021-06-22T19:53:24.000Z",
+    "eventType": "ActivityTaskStarted",
+    "eventId": "12",
+    "details": {
+      "scheduledEventId": "11",
+      "identity": "27288@Tihomirs-MBP",
+      "requestId": "bac51e8c-92f4-4ac1-bab9-a550a3514e86",
+      "attempt": 1,
+      "lastFailure": null,
+      "eventId": "12",
+      "eventType": "ActivityTaskStarted",
+      "kvps": [
+        {
+          "key": "eventTime",
+          "value": "Jun 22nd 3:53:24 pm"
+        },
+        {
+          "key": "eventId",
+          "value": "12"
+        },
+        {
+          "key": "scheduledEventId",
+          "value": "11"
+        },
+        {
+          "key": "identity",
+          "value": "27288@Tihomirs-MBP"
+        },
+        {
+          "key": "requestId",
+          "value": "bac51e8c-92f4-4ac1-bab9-a550a3514e86"
+        },
+        {
+          "key": "attempt",
+          "value": 1
+        }
+      ],
+      "eventTime": "Jun 22nd 3:53:24 pm"
+    },
+    "eventTimeDisplay": "Jun 22nd 3:53:24 pm",
+    "timeElapsedDisplay": "5s",
+    "eventSummary": {
+      "attempt": 1,
+      "identity": "27288@Tihomirs-MBP",
+      "requestId": "bac51e8c-92f4-4ac1-bab9-a550a3514e86",
+      "eventId": "12",
+      "eventType": "ActivityTaskStarted",
+      "kvps": [
+        {
+          "key": "attempt",
+          "value": 1
+        },
+        {
+          "key": "identity",
+          "value": "27288@Tihomirs-MBP"
+        },
+        {
+          "key": "requestId",
+          "value": "bac51e8c-92f4-4ac1-bab9-a550a3514e86"
+        }
+      ]
+    },
+    "eventFullDetails": {
+      "scheduledEventId": "11",
+      "identity": "27288@Tihomirs-MBP",
+      "requestId": "bac51e8c-92f4-4ac1-bab9-a550a3514e86",
+      "attempt": 1,
+      "lastFailure": null,
+      "eventId": "12",
+      "eventType": "ActivityTaskStarted",
+      "kvps": [
+        {
+          "key": "scheduledEventId",
+          "value": "11"
+        },
+        {
+          "key": "identity",
+          "value": "27288@Tihomirs-MBP"
+        },
+        {
+          "key": "requestId",
+          "value": "bac51e8c-92f4-4ac1-bab9-a550a3514e86"
+        },
+        {
+          "key": "attempt",
+          "value": 1
+        }
+      ]
+    }
+  },
+  {
+    "eventTime": "2021-06-22T19:53:29.000Z",
+    "eventType": "ActivityTaskCompleted",
+    "eventId": "13",
+    "details": {
+      "result": {
+        "payloads": [
+          "{name:Michael Scott,img:img/docfemale.png,specialty:General}"
+        ]
+      },
+      "scheduledEventId": "11",
+      "startedEventId": "12",
+      "identity": "27288@Tihomirs-MBP",
+      "eventId": "13",
+      "eventType": "ActivityTaskCompleted",
+      "kvps": [
+        {
+          "key": "eventTime",
+          "value": "Jun 22nd 3:53:29 pm"
+        },
+        {
+          "key": "eventId",
+          "value": "13"
+        },
+        {
+          "key": "result",
+          "value": [
+            "{name:Michael Scott,img:img/docfemale.png,specialty:General}"
+          ]
+        },
+        {
+          "key": "scheduledEventId",
+          "value": "11"
+        },
+        {
+          "key": "startedEventId",
+          "value": "12"
+        },
+        {
+          "key": "identity",
+          "value": "27288@Tihomirs-MBP"
+        }
+      ],
+      "eventTime": "Jun 22nd 3:53:29 pm"
+    },
+    "eventTimeDisplay": "Jun 22nd 3:53:29 pm",
+    "timeElapsedDisplay": "10s (+5s)",
+    "eventSummary": {
+      "result": {
+        "payloads": [
+          "{name:Michael Scott,img:img/docfemale.png,specialty:General}"
+        ]
+      },
+      "eventId": "13",
+      "eventType": "ActivityTaskCompleted",
+      "kvps": [
+        {
+          "key": "result",
+          "value": [
+            "{name:Michael Scott,img:img/docfemale.png,specialty:General}"
+          ]
+        }
+      ]
+    },
+    "eventFullDetails": {
+      "result": {
+        "payloads": [
+          "{name:Michael Scott,img:img/docfemale.png,specialty:General}"
+        ]
+      },
+      "scheduledEventId": "11",
+      "startedEventId": "12",
+      "identity": "27288@Tihomirs-MBP",
+      "eventId": "13",
+      "eventType": "ActivityTaskCompleted",
+      "kvps": [
+        {
+          "key": "result",
+          "value": [
+            "{name:Michael Scott,img:img/docfemale.png,specialty:General}"
+          ]
+        },
+        {
+          "key": "scheduledEventId",
+          "value": "11"
+        },
+        {
+          "key": "startedEventId",
+          "value": "12"
+        },
+        {
+          "key": "identity",
+          "value": "27288@Tihomirs-MBP"
+        }
+      ]
+    }
+  },
+  {
+    "eventTime": "2021-06-22T19:53:29.000Z",
+    "eventType": "WorkflowTaskScheduled",
+    "eventId": "14",
+    "details": {
+      "taskQueue": {
+        "name": "27288@Tihomirs-MBP:adb5d5ab-5481-4f39-be68-45feac62b9e3",
+        "kind": "Sticky"
+      },
+      "startToCloseTimeout": {
+        "duration": 10
+      },
+      "attempt": 1,
+      "eventId": "14",
+      "eventType": "WorkflowTaskScheduled",
+      "kvps": [
+        {
+          "key": "eventTime",
+          "value": "Jun 22nd 3:53:29 pm"
+        },
+        {
+          "key": "eventId",
+          "value": "14"
+        },
+        {
+          "key": "taskQueue.name",
+          "routeLink": {
+            "name": "task-queue",
+            "params": {
+              "taskQueue": "27288@Tihomirs-MBP:adb5d5ab-5481-4f39-be68-45feac62b9e3"
+            }
+          },
+          "value": "27288@Tihomirs-MBP:adb5d5ab-5481-4f39-be68-45feac62b9e3"
+        },
+        {
+          "key": "taskQueue.kind",
+          "value": "Sticky"
+        },
+        {
+          "key": "startToCloseTimeout",
+          "value": "10s"
+        },
+        {
+          "key": "attempt",
+          "value": 1
+        }
+      ],
+      "eventTime": "Jun 22nd 3:53:29 pm"
+    },
+    "eventTimeDisplay": "Jun 22nd 3:53:29 pm",
+    "timeElapsedDisplay": "10s",
+    "eventSummary": {
+      "Taskqueue": "27288@Tihomirs-MBP:adb5d5ab-5481-4f39-be68-45feac62b9e3",
+      "Timeout": "10s",
+      "eventId": "14",
+      "eventType": "WorkflowTaskScheduled",
+      "kvps": [
+        {
+          "key": "Taskqueue",
+          "routeLink": {
+            "name": "task-queue",
+            "params": {
+              "taskQueue": "27288@Tihomirs-MBP:adb5d5ab-5481-4f39-be68-45feac62b9e3"
+            }
+          },
+          "value": "27288@Tihomirs-MBP:adb5d5ab-5481-4f39-be68-45feac62b9e3"
+        },
+        {
+          "key": "Timeout",
+          "value": "10s"
+        }
+      ]
+    },
+    "eventFullDetails": {
+      "taskQueue": {
+        "name": "27288@Tihomirs-MBP:adb5d5ab-5481-4f39-be68-45feac62b9e3",
+        "kind": "Sticky"
+      },
+      "startToCloseTimeout": {
+        "duration": 10
+      },
+      "attempt": 1,
+      "eventId": "14",
+      "eventType": "WorkflowTaskScheduled",
+      "kvps": [
+        {
+          "key": "taskQueue.name",
+          "routeLink": {
+            "name": "task-queue",
+            "params": {
+              "taskQueue": "27288@Tihomirs-MBP:adb5d5ab-5481-4f39-be68-45feac62b9e3"
+            }
+          },
+          "value": "27288@Tihomirs-MBP:adb5d5ab-5481-4f39-be68-45feac62b9e3"
+        },
+        {
+          "key": "taskQueue.kind",
+          "value": "Sticky"
+        },
+        {
+          "key": "startToCloseTimeout",
+          "value": "10s"
+        },
+        {
+          "key": "attempt",
+          "value": 1
+        }
+      ]
+    }
+  },
+  {
+    "eventTime": "2021-06-22T19:53:29.000Z",
+    "eventType": "WorkflowTaskStarted",
+    "eventId": "15",
+    "details": {
+      "scheduledEventId": "14",
+      "identity": "adb5d5ab-5481-4f39-be68-45feac62b9e3",
+      "requestId": "2ab5cb8b-665c-4880-a198-e6dcd8461987",
+      "eventId": "15",
+      "eventType": "WorkflowTaskStarted",
+      "kvps": [
+        {
+          "key": "eventTime",
+          "value": "Jun 22nd 3:53:29 pm"
+        },
+        {
+          "key": "eventId",
+          "value": "15"
+        },
+        {
+          "key": "scheduledEventId",
+          "value": "14"
+        },
+        {
+          "key": "identity",
+          "value": "adb5d5ab-5481-4f39-be68-45feac62b9e3"
+        },
+        {
+          "key": "requestId",
+          "value": "2ab5cb8b-665c-4880-a198-e6dcd8461987"
+        }
+      ],
+      "eventTime": "Jun 22nd 3:53:29 pm"
+    },
+    "eventTimeDisplay": "Jun 22nd 3:53:29 pm",
+    "timeElapsedDisplay": "10s",
+    "eventSummary": {
+      "requestId": "2ab5cb8b-665c-4880-a198-e6dcd8461987",
+      "eventId": "15",
+      "eventType": "WorkflowTaskStarted",
+      "kvps": [
+        {
+          "key": "requestId",
+          "value": "2ab5cb8b-665c-4880-a198-e6dcd8461987"
+        }
+      ]
+    },
+    "eventFullDetails": {
+      "scheduledEventId": "14",
+      "identity": "adb5d5ab-5481-4f39-be68-45feac62b9e3",
+      "requestId": "2ab5cb8b-665c-4880-a198-e6dcd8461987",
+      "eventId": "15",
+      "eventType": "WorkflowTaskStarted",
+      "kvps": [
+        {
+          "key": "scheduledEventId",
+          "value": "14"
+        },
+        {
+          "key": "identity",
+          "value": "adb5d5ab-5481-4f39-be68-45feac62b9e3"
+        },
+        {
+          "key": "requestId",
+          "value": "2ab5cb8b-665c-4880-a198-e6dcd8461987"
+        }
+      ]
+    }
+  },
+  {
+    "eventTime": "2021-06-22T19:53:29.000Z",
+    "eventType": "WorkflowTaskCompleted",
+    "eventId": "16",
+    "details": {
+      "scheduledEventId": "14",
+      "startedEventId": "15",
+      "identity": "27288@Tihomirs-MBP",
+      "binaryChecksum": "",
+      "eventId": "16",
+      "eventType": "WorkflowTaskCompleted",
+      "kvps": [
+        {
+          "key": "eventTime",
+          "value": "Jun 22nd 3:53:29 pm"
+        },
+        {
+          "key": "eventId",
+          "value": "16"
+        },
+        {
+          "key": "scheduledEventId",
+          "value": "14"
+        },
+        {
+          "key": "startedEventId",
+          "value": "15"
+        },
+        {
+          "key": "identity",
+          "value": "27288@Tihomirs-MBP"
+        },
+        {
+          "key": "binaryChecksum",
+          "value": ""
+        }
+      ],
+      "eventTime": "Jun 22nd 3:53:29 pm"
+    },
+    "eventTimeDisplay": "Jun 22nd 3:53:29 pm",
+    "timeElapsedDisplay": "10s",
+    "eventSummary": {
+      "identity": "27288@Tihomirs-MBP",
+      "eventId": "16",
+      "eventType": "WorkflowTaskCompleted",
+      "kvps": [
+        {
+          "key": "identity",
+          "value": "27288@Tihomirs-MBP"
+        }
+      ]
+    },
+    "eventFullDetails": {
+      "scheduledEventId": "14",
+      "startedEventId": "15",
+      "identity": "27288@Tihomirs-MBP",
+      "binaryChecksum": "",
+      "eventId": "16",
+      "eventType": "WorkflowTaskCompleted",
+      "kvps": [
+        {
+          "key": "scheduledEventId",
+          "value": "14"
+        },
+        {
+          "key": "startedEventId",
+          "value": "15"
+        },
+        {
+          "key": "identity",
+          "value": "27288@Tihomirs-MBP"
+        },
+        {
+          "key": "binaryChecksum",
+          "value": ""
+        }
+      ]
+    }
+  },
+  {
+    "eventTime": "2021-06-22T19:53:29.000Z",
+    "eventType": "ActivityTaskScheduled",
+    "eventId": "17",
+    "details": {
+      "activityId": "dbccd709-c178-3ab5-8bb3-87375e159160",
+      "activityType": {
+        "name": "NotifyViaEmail"
+      },
+      "namespace": "",
+      "taskQueue": {
+        "name": "OnboardingTaskQueue",
+        "kind": "Normal"
+      },
+      "header": {
+        "fields": {}
+      },
+      "input": {
+        "payloads": [
+          "asdasd"
+        ]
+      },
+      "scheduleToCloseTimeout": {
+        "duration": 60
+      },
+      "scheduleToStartTimeout": {
+        "duration": 60
+      },
+      "startToCloseTimeout": {
+        "duration": 60
+      },
+      "heartbeatTimeout": {
+        "duration": 0
+      },
+      "workflowTaskCompletedEventId": "16",
+      "retryPolicy": {
+        "nonRetryableErrorTypes": [],
+        "initialInterval": {
+          "duration": 1
+        },
+        "backoffCoefficient": 2,
+        "maximumInterval": {
+          "duration": 100
+        },
+        "maximumAttempts": 0
+      },
+      "eventId": "17",
+      "eventType": "ActivityTaskScheduled",
+      "kvps": [
+        {
+          "key": "eventTime",
+          "value": "Jun 22nd 3:53:29 pm"
+        },
+        {
+          "key": "eventId",
+          "value": "17"
+        },
+        {
+          "key": "activityId",
+          "value": "dbccd709-c178-3ab5-8bb3-87375e159160"
+        },
+        {
+          "key": "activityType.name",
+          "value": "NotifyViaEmail"
+        },
+        {
+          "key": "namespace",
+          "value": ""
+        },
+        {
+          "key": "taskQueue.name",
+          "routeLink": {
+            "name": "task-queue",
+            "params": {
+              "taskQueue": "OnboardingTaskQueue"
+            }
+          },
+          "value": "OnboardingTaskQueue"
+        },
+        {
+          "key": "taskQueue.kind",
+          "value": "Normal"
+        },
+        {
+          "key": "input",
+          "value": [
+            "asdasd"
+          ]
+        },
+        {
+          "key": "scheduleToCloseTimeout",
+          "value": "1m"
+        },
+        {
+          "key": "scheduleToStartTimeout",
+          "value": "1m"
+        },
+        {
+          "key": "startToCloseTimeout",
+          "value": "1m"
+        },
+        {
+          "key": "heartbeatTimeout",
+          "value": ""
+        },
+        {
+          "key": "workflowTaskCompletedEventId",
+          "value": "16"
+        },
+        {
+          "key": "retryPolicy.initialInterval",
+          "value": "1s"
+        },
+        {
+          "key": "retryPolicy.backoffCoefficient",
+          "value": 2
+        },
+        {
+          "key": "retryPolicy.maximumInterval",
+          "value": "1m 40s"
+        },
+        {
+          "key": "retryPolicy.maximumAttempts",
+          "value": 0
+        }
+      ],
+      "eventTime": "Jun 22nd 3:53:29 pm"
+    },
+    "eventTimeDisplay": "Jun 22nd 3:53:29 pm",
+    "timeElapsedDisplay": "10s",
+    "eventSummary": {
+      "Close Timeout": "1m",
+      "Id": "dbccd709-c178-3ab5-8bb3-87375e159160",
+      "input": {
+        "payloads": [
+          "asdasd"
+        ]
+      },
+      "Name": "NotifyViaEmail",
+      "eventId": "17",
+      "eventType": "ActivityTaskScheduled",
+      "kvps": [
+        {
+          "key": "Close Timeout",
+          "value": "1m"
+        },
+        {
+          "key": "Id",
+          "value": "dbccd709-c178-3ab5-8bb3-87375e159160"
+        },
+        {
+          "key": "input",
+          "value": [
+            "asdasd"
+          ]
+        },
+        {
+          "key": "Name",
+          "value": "NotifyViaEmail"
+        }
+      ]
+    },
+    "eventFullDetails": {
+      "activityId": "dbccd709-c178-3ab5-8bb3-87375e159160",
+      "activityType": {
+        "name": "NotifyViaEmail"
+      },
+      "namespace": "",
+      "taskQueue": {
+        "name": "OnboardingTaskQueue",
+        "kind": "Normal"
+      },
+      "header": {
+        "fields": {}
+      },
+      "input": {
+        "payloads": [
+          "asdasd"
+        ]
+      },
+      "scheduleToCloseTimeout": {
+        "duration": 60
+      },
+      "scheduleToStartTimeout": {
+        "duration": 60
+      },
+      "startToCloseTimeout": {
+        "duration": 60
+      },
+      "heartbeatTimeout": {
+        "duration": 0
+      },
+      "workflowTaskCompletedEventId": "16",
+      "retryPolicy": {
+        "nonRetryableErrorTypes": [],
+        "initialInterval": {
+          "duration": 1
+        },
+        "backoffCoefficient": 2,
+        "maximumInterval": {
+          "duration": 100
+        },
+        "maximumAttempts": 0
+      },
+      "eventId": "17",
+      "eventType": "ActivityTaskScheduled",
+      "kvps": [
+        {
+          "key": "activityId",
+          "value": "dbccd709-c178-3ab5-8bb3-87375e159160"
+        },
+        {
+          "key": "activityType.name",
+          "value": "NotifyViaEmail"
+        },
+        {
+          "key": "namespace",
+          "value": ""
+        },
+        {
+          "key": "taskQueue.name",
+          "routeLink": {
+            "name": "task-queue",
+            "params": {
+              "taskQueue": "OnboardingTaskQueue"
+            }
+          },
+          "value": "OnboardingTaskQueue"
+        },
+        {
+          "key": "taskQueue.kind",
+          "value": "Normal"
+        },
+        {
+          "key": "input",
+          "value": [
+            "asdasd"
+          ]
+        },
+        {
+          "key": "scheduleToCloseTimeout",
+          "value": "1m"
+        },
+        {
+          "key": "scheduleToStartTimeout",
+          "value": "1m"
+        },
+        {
+          "key": "startToCloseTimeout",
+          "value": "1m"
+        },
+        {
+          "key": "heartbeatTimeout",
+          "value": ""
+        },
+        {
+          "key": "workflowTaskCompletedEventId",
+          "value": "16"
+        },
+        {
+          "key": "retryPolicy.initialInterval",
+          "value": "1s"
+        },
+        {
+          "key": "retryPolicy.backoffCoefficient",
+          "value": 2
+        },
+        {
+          "key": "retryPolicy.maximumInterval",
+          "value": "1m 40s"
+        },
+        {
+          "key": "retryPolicy.maximumAttempts",
+          "value": 0
+        }
+      ]
+    }
+  },
+  {
+    "eventTime": "2021-06-22T19:53:29.000Z",
+    "eventType": "ActivityTaskStarted",
+    "eventId": "18",
+    "details": {
+      "scheduledEventId": "17",
+      "identity": "27288@Tihomirs-MBP",
+      "requestId": "f3828df0-d13d-46cb-ab78-c335c1bb9b33",
+      "attempt": 1,
+      "lastFailure": null,
+      "eventId": "18",
+      "eventType": "ActivityTaskStarted",
+      "kvps": [
+        {
+          "key": "eventTime",
+          "value": "Jun 22nd 3:53:29 pm"
+        },
+        {
+          "key": "eventId",
+          "value": "18"
+        },
+        {
+          "key": "scheduledEventId",
+          "value": "17"
+        },
+        {
+          "key": "identity",
+          "value": "27288@Tihomirs-MBP"
+        },
+        {
+          "key": "requestId",
+          "value": "f3828df0-d13d-46cb-ab78-c335c1bb9b33"
+        },
+        {
+          "key": "attempt",
+          "value": 1
+        }
+      ],
+      "eventTime": "Jun 22nd 3:53:29 pm"
+    },
+    "eventTimeDisplay": "Jun 22nd 3:53:29 pm",
+    "timeElapsedDisplay": "10s",
+    "eventSummary": {
+      "attempt": 1,
+      "identity": "27288@Tihomirs-MBP",
+      "requestId": "f3828df0-d13d-46cb-ab78-c335c1bb9b33",
+      "eventId": "18",
+      "eventType": "ActivityTaskStarted",
+      "kvps": [
+        {
+          "key": "attempt",
+          "value": 1
+        },
+        {
+          "key": "identity",
+          "value": "27288@Tihomirs-MBP"
+        },
+        {
+          "key": "requestId",
+          "value": "f3828df0-d13d-46cb-ab78-c335c1bb9b33"
+        }
+      ]
+    },
+    "eventFullDetails": {
+      "scheduledEventId": "17",
+      "identity": "27288@Tihomirs-MBP",
+      "requestId": "f3828df0-d13d-46cb-ab78-c335c1bb9b33",
+      "attempt": 1,
+      "lastFailure": null,
+      "eventId": "18",
+      "eventType": "ActivityTaskStarted",
+      "kvps": [
+        {
+          "key": "scheduledEventId",
+          "value": "17"
+        },
+        {
+          "key": "identity",
+          "value": "27288@Tihomirs-MBP"
+        },
+        {
+          "key": "requestId",
+          "value": "f3828df0-d13d-46cb-ab78-c335c1bb9b33"
+        },
+        {
+          "key": "attempt",
+          "value": 1
+        }
+      ]
+    }
+  },
+  {
+    "eventTime": "2021-06-22T19:53:34.000Z",
+    "eventType": "ActivityTaskCompleted",
+    "eventId": "19",
+    "details": {
+      "result": null,
+      "scheduledEventId": "17",
+      "startedEventId": "18",
+      "identity": "27288@Tihomirs-MBP",
+      "eventId": "19",
+      "eventType": "ActivityTaskCompleted",
+      "kvps": [
+        {
+          "key": "eventTime",
+          "value": "Jun 22nd 3:53:34 pm"
+        },
+        {
+          "key": "eventId",
+          "value": "19"
+        },
+        {
+          "key": "scheduledEventId",
+          "value": "17"
+        },
+        {
+          "key": "startedEventId",
+          "value": "18"
+        },
+        {
+          "key": "identity",
+          "value": "27288@Tihomirs-MBP"
+        }
+      ],
+      "eventTime": "Jun 22nd 3:53:34 pm"
+    },
+    "eventTimeDisplay": "Jun 22nd 3:53:34 pm",
+    "timeElapsedDisplay": "15s (+5s)",
+    "eventSummary": {
+      "result": null,
+      "eventId": "19",
+      "eventType": "ActivityTaskCompleted",
+      "kvps": []
+    },
+    "eventFullDetails": {
+      "result": null,
+      "scheduledEventId": "17",
+      "startedEventId": "18",
+      "identity": "27288@Tihomirs-MBP",
+      "eventId": "19",
+      "eventType": "ActivityTaskCompleted",
+      "kvps": [
+        {
+          "key": "scheduledEventId",
+          "value": "17"
+        },
+        {
+          "key": "startedEventId",
+          "value": "18"
+        },
+        {
+          "key": "identity",
+          "value": "27288@Tihomirs-MBP"
+        }
+      ]
+    }
+  },
+  {
+    "eventTime": "2021-06-22T19:53:34.000Z",
+    "eventType": "WorkflowTaskScheduled",
+    "eventId": "20",
+    "details": {
+      "taskQueue": {
+        "name": "27288@Tihomirs-MBP:adb5d5ab-5481-4f39-be68-45feac62b9e3",
+        "kind": "Sticky"
+      },
+      "startToCloseTimeout": {
+        "duration": 10
+      },
+      "attempt": 1,
+      "eventId": "20",
+      "eventType": "WorkflowTaskScheduled",
+      "kvps": [
+        {
+          "key": "eventTime",
+          "value": "Jun 22nd 3:53:34 pm"
+        },
+        {
+          "key": "eventId",
+          "value": "20"
+        },
+        {
+          "key": "taskQueue.name",
+          "routeLink": {
+            "name": "task-queue",
+            "params": {
+              "taskQueue": "27288@Tihomirs-MBP:adb5d5ab-5481-4f39-be68-45feac62b9e3"
+            }
+          },
+          "value": "27288@Tihomirs-MBP:adb5d5ab-5481-4f39-be68-45feac62b9e3"
+        },
+        {
+          "key": "taskQueue.kind",
+          "value": "Sticky"
+        },
+        {
+          "key": "startToCloseTimeout",
+          "value": "10s"
+        },
+        {
+          "key": "attempt",
+          "value": 1
+        }
+      ],
+      "eventTime": "Jun 22nd 3:53:34 pm"
+    },
+    "eventTimeDisplay": "Jun 22nd 3:53:34 pm",
+    "timeElapsedDisplay": "15s",
+    "eventSummary": {
+      "Taskqueue": "27288@Tihomirs-MBP:adb5d5ab-5481-4f39-be68-45feac62b9e3",
+      "Timeout": "10s",
+      "eventId": "20",
+      "eventType": "WorkflowTaskScheduled",
+      "kvps": [
+        {
+          "key": "Taskqueue",
+          "routeLink": {
+            "name": "task-queue",
+            "params": {
+              "taskQueue": "27288@Tihomirs-MBP:adb5d5ab-5481-4f39-be68-45feac62b9e3"
+            }
+          },
+          "value": "27288@Tihomirs-MBP:adb5d5ab-5481-4f39-be68-45feac62b9e3"
+        },
+        {
+          "key": "Timeout",
+          "value": "10s"
+        }
+      ]
+    },
+    "eventFullDetails": {
+      "taskQueue": {
+        "name": "27288@Tihomirs-MBP:adb5d5ab-5481-4f39-be68-45feac62b9e3",
+        "kind": "Sticky"
+      },
+      "startToCloseTimeout": {
+        "duration": 10
+      },
+      "attempt": 1,
+      "eventId": "20",
+      "eventType": "WorkflowTaskScheduled",
+      "kvps": [
+        {
+          "key": "taskQueue.name",
+          "routeLink": {
+            "name": "task-queue",
+            "params": {
+              "taskQueue": "27288@Tihomirs-MBP:adb5d5ab-5481-4f39-be68-45feac62b9e3"
+            }
+          },
+          "value": "27288@Tihomirs-MBP:adb5d5ab-5481-4f39-be68-45feac62b9e3"
+        },
+        {
+          "key": "taskQueue.kind",
+          "value": "Sticky"
+        },
+        {
+          "key": "startToCloseTimeout",
+          "value": "10s"
+        },
+        {
+          "key": "attempt",
+          "value": 1
+        }
+      ]
+    }
+  },
+  {
+    "eventTime": "2021-06-22T19:53:34.000Z",
+    "eventType": "WorkflowTaskStarted",
+    "eventId": "21",
+    "details": {
+      "scheduledEventId": "20",
+      "identity": "adb5d5ab-5481-4f39-be68-45feac62b9e3",
+      "requestId": "f8d77c1d-9625-4b4f-baf5-aff7ac7c11bc",
+      "eventId": "21",
+      "eventType": "WorkflowTaskStarted",
+      "kvps": [
+        {
+          "key": "eventTime",
+          "value": "Jun 22nd 3:53:34 pm"
+        },
+        {
+          "key": "eventId",
+          "value": "21"
+        },
+        {
+          "key": "scheduledEventId",
+          "value": "20"
+        },
+        {
+          "key": "identity",
+          "value": "adb5d5ab-5481-4f39-be68-45feac62b9e3"
+        },
+        {
+          "key": "requestId",
+          "value": "f8d77c1d-9625-4b4f-baf5-aff7ac7c11bc"
+        }
+      ],
+      "eventTime": "Jun 22nd 3:53:34 pm"
+    },
+    "eventTimeDisplay": "Jun 22nd 3:53:34 pm",
+    "timeElapsedDisplay": "15s",
+    "eventSummary": {
+      "requestId": "f8d77c1d-9625-4b4f-baf5-aff7ac7c11bc",
+      "eventId": "21",
+      "eventType": "WorkflowTaskStarted",
+      "kvps": [
+        {
+          "key": "requestId",
+          "value": "f8d77c1d-9625-4b4f-baf5-aff7ac7c11bc"
+        }
+      ]
+    },
+    "eventFullDetails": {
+      "scheduledEventId": "20",
+      "identity": "adb5d5ab-5481-4f39-be68-45feac62b9e3",
+      "requestId": "f8d77c1d-9625-4b4f-baf5-aff7ac7c11bc",
+      "eventId": "21",
+      "eventType": "WorkflowTaskStarted",
+      "kvps": [
+        {
+          "key": "scheduledEventId",
+          "value": "20"
+        },
+        {
+          "key": "identity",
+          "value": "adb5d5ab-5481-4f39-be68-45feac62b9e3"
+        },
+        {
+          "key": "requestId",
+          "value": "f8d77c1d-9625-4b4f-baf5-aff7ac7c11bc"
+        }
+      ]
+    }
+  },
+  {
+    "eventTime": "2021-06-22T19:53:34.000Z",
+    "eventType": "WorkflowTaskCompleted",
+    "eventId": "22",
+    "details": {
+      "scheduledEventId": "20",
+      "startedEventId": "21",
+      "identity": "27288@Tihomirs-MBP",
+      "binaryChecksum": "",
+      "eventId": "22",
+      "eventType": "WorkflowTaskCompleted",
+      "kvps": [
+        {
+          "key": "eventTime",
+          "value": "Jun 22nd 3:53:34 pm"
+        },
+        {
+          "key": "eventId",
+          "value": "22"
+        },
+        {
+          "key": "scheduledEventId",
+          "value": "20"
+        },
+        {
+          "key": "startedEventId",
+          "value": "21"
+        },
+        {
+          "key": "identity",
+          "value": "27288@Tihomirs-MBP"
+        },
+        {
+          "key": "binaryChecksum",
+          "value": ""
+        }
+      ],
+      "eventTime": "Jun 22nd 3:53:34 pm"
+    },
+    "eventTimeDisplay": "Jun 22nd 3:53:34 pm",
+    "timeElapsedDisplay": "15s",
+    "eventSummary": {
+      "identity": "27288@Tihomirs-MBP",
+      "eventId": "22",
+      "eventType": "WorkflowTaskCompleted",
+      "kvps": [
+        {
+          "key": "identity",
+          "value": "27288@Tihomirs-MBP"
+        }
+      ]
+    },
+    "eventFullDetails": {
+      "scheduledEventId": "20",
+      "startedEventId": "21",
+      "identity": "27288@Tihomirs-MBP",
+      "binaryChecksum": "",
+      "eventId": "22",
+      "eventType": "WorkflowTaskCompleted",
+      "kvps": [
+        {
+          "key": "scheduledEventId",
+          "value": "20"
+        },
+        {
+          "key": "startedEventId",
+          "value": "21"
+        },
+        {
+          "key": "identity",
+          "value": "27288@Tihomirs-MBP"
+        },
+        {
+          "key": "binaryChecksum",
+          "value": ""
+        }
+      ]
+    }
+  },
+  {
+    "eventTime": "2021-06-22T19:53:34.000Z",
+    "eventType": "ActivityTaskScheduled",
+    "eventId": "23",
+    "details": {
+      "activityId": "fbde6278-fba4-3b97-a348-9deb322da745",
+      "activityType": {
+        "name": "FinalizeOnboarding"
+      },
+      "namespace": "",
+      "taskQueue": {
+        "name": "OnboardingTaskQueue",
+        "kind": "Normal"
+      },
+      "header": {
+        "fields": {}
+      },
+      "input": null,
+      "scheduleToCloseTimeout": {
+        "duration": 60
+      },
+      "scheduleToStartTimeout": {
+        "duration": 60
+      },
+      "startToCloseTimeout": {
+        "duration": 60
+      },
+      "heartbeatTimeout": {
+        "duration": 0
+      },
+      "workflowTaskCompletedEventId": "22",
+      "retryPolicy": {
+        "nonRetryableErrorTypes": [],
+        "initialInterval": {
+          "duration": 1
+        },
+        "backoffCoefficient": 2,
+        "maximumInterval": {
+          "duration": 100
+        },
+        "maximumAttempts": 0
+      },
+      "eventId": "23",
+      "eventType": "ActivityTaskScheduled",
+      "kvps": [
+        {
+          "key": "eventTime",
+          "value": "Jun 22nd 3:53:34 pm"
+        },
+        {
+          "key": "eventId",
+          "value": "23"
+        },
+        {
+          "key": "activityId",
+          "value": "fbde6278-fba4-3b97-a348-9deb322da745"
+        },
+        {
+          "key": "activityType.name",
+          "value": "FinalizeOnboarding"
+        },
+        {
+          "key": "namespace",
+          "value": ""
+        },
+        {
+          "key": "taskQueue.name",
+          "routeLink": {
+            "name": "task-queue",
+            "params": {
+              "taskQueue": "OnboardingTaskQueue"
+            }
+          },
+          "value": "OnboardingTaskQueue"
+        },
+        {
+          "key": "taskQueue.kind",
+          "value": "Normal"
+        },
+        {
+          "key": "scheduleToCloseTimeout",
+          "value": "1m"
+        },
+        {
+          "key": "scheduleToStartTimeout",
+          "value": "1m"
+        },
+        {
+          "key": "startToCloseTimeout",
+          "value": "1m"
+        },
+        {
+          "key": "heartbeatTimeout",
+          "value": ""
+        },
+        {
+          "key": "workflowTaskCompletedEventId",
+          "value": "22"
+        },
+        {
+          "key": "retryPolicy.initialInterval",
+          "value": "1s"
+        },
+        {
+          "key": "retryPolicy.backoffCoefficient",
+          "value": 2
+        },
+        {
+          "key": "retryPolicy.maximumInterval",
+          "value": "1m 40s"
+        },
+        {
+          "key": "retryPolicy.maximumAttempts",
+          "value": 0
+        }
+      ],
+      "eventTime": "Jun 22nd 3:53:34 pm"
+    },
+    "eventTimeDisplay": "Jun 22nd 3:53:34 pm",
+    "timeElapsedDisplay": "15s",
+    "eventSummary": {
+      "Close Timeout": "1m",
+      "Id": "fbde6278-fba4-3b97-a348-9deb322da745",
+      "input": null,
+      "Name": "FinalizeOnboarding",
+      "eventId": "23",
+      "eventType": "ActivityTaskScheduled",
+      "kvps": [
+        {
+          "key": "Close Timeout",
+          "value": "1m"
+        },
+        {
+          "key": "Id",
+          "value": "fbde6278-fba4-3b97-a348-9deb322da745"
+        },
+        {
+          "key": "Name",
+          "value": "FinalizeOnboarding"
+        }
+      ]
+    },
+    "eventFullDetails": {
+      "activityId": "fbde6278-fba4-3b97-a348-9deb322da745",
+      "activityType": {
+        "name": "FinalizeOnboarding"
+      },
+      "namespace": "",
+      "taskQueue": {
+        "name": "OnboardingTaskQueue",
+        "kind": "Normal"
+      },
+      "header": {
+        "fields": {}
+      },
+      "input": null,
+      "scheduleToCloseTimeout": {
+        "duration": 60
+      },
+      "scheduleToStartTimeout": {
+        "duration": 60
+      },
+      "startToCloseTimeout": {
+        "duration": 60
+      },
+      "heartbeatTimeout": {
+        "duration": 0
+      },
+      "workflowTaskCompletedEventId": "22",
+      "retryPolicy": {
+        "nonRetryableErrorTypes": [],
+        "initialInterval": {
+          "duration": 1
+        },
+        "backoffCoefficient": 2,
+        "maximumInterval": {
+          "duration": 100
+        },
+        "maximumAttempts": 0
+      },
+      "eventId": "23",
+      "eventType": "ActivityTaskScheduled",
+      "kvps": [
+        {
+          "key": "activityId",
+          "value": "fbde6278-fba4-3b97-a348-9deb322da745"
+        },
+        {
+          "key": "activityType.name",
+          "value": "FinalizeOnboarding"
+        },
+        {
+          "key": "namespace",
+          "value": ""
+        },
+        {
+          "key": "taskQueue.name",
+          "routeLink": {
+            "name": "task-queue",
+            "params": {
+              "taskQueue": "OnboardingTaskQueue"
+            }
+          },
+          "value": "OnboardingTaskQueue"
+        },
+        {
+          "key": "taskQueue.kind",
+          "value": "Normal"
+        },
+        {
+          "key": "scheduleToCloseTimeout",
+          "value": "1m"
+        },
+        {
+          "key": "scheduleToStartTimeout",
+          "value": "1m"
+        },
+        {
+          "key": "startToCloseTimeout",
+          "value": "1m"
+        },
+        {
+          "key": "heartbeatTimeout",
+          "value": ""
+        },
+        {
+          "key": "workflowTaskCompletedEventId",
+          "value": "22"
+        },
+        {
+          "key": "retryPolicy.initialInterval",
+          "value": "1s"
+        },
+        {
+          "key": "retryPolicy.backoffCoefficient",
+          "value": 2
+        },
+        {
+          "key": "retryPolicy.maximumInterval",
+          "value": "1m 40s"
+        },
+        {
+          "key": "retryPolicy.maximumAttempts",
+          "value": 0
+        }
+      ]
+    }
+  },
+  {
+    "eventTime": "2021-06-22T19:53:34.000Z",
+    "eventType": "ActivityTaskStarted",
+    "eventId": "24",
+    "details": {
+      "scheduledEventId": "23",
+      "identity": "27288@Tihomirs-MBP",
+      "requestId": "be122594-3d56-4964-b4e6-6e58f0923143",
+      "attempt": 1,
+      "lastFailure": null,
+      "eventId": "24",
+      "eventType": "ActivityTaskStarted",
+      "kvps": [
+        {
+          "key": "eventTime",
+          "value": "Jun 22nd 3:53:34 pm"
+        },
+        {
+          "key": "eventId",
+          "value": "24"
+        },
+        {
+          "key": "scheduledEventId",
+          "value": "23"
+        },
+        {
+          "key": "identity",
+          "value": "27288@Tihomirs-MBP"
+        },
+        {
+          "key": "requestId",
+          "value": "be122594-3d56-4964-b4e6-6e58f0923143"
+        },
+        {
+          "key": "attempt",
+          "value": 1
+        }
+      ],
+      "eventTime": "Jun 22nd 3:53:34 pm"
+    },
+    "eventTimeDisplay": "Jun 22nd 3:53:34 pm",
+    "timeElapsedDisplay": "15s",
+    "eventSummary": {
+      "attempt": 1,
+      "identity": "27288@Tihomirs-MBP",
+      "requestId": "be122594-3d56-4964-b4e6-6e58f0923143",
+      "eventId": "24",
+      "eventType": "ActivityTaskStarted",
+      "kvps": [
+        {
+          "key": "attempt",
+          "value": 1
+        },
+        {
+          "key": "identity",
+          "value": "27288@Tihomirs-MBP"
+        },
+        {
+          "key": "requestId",
+          "value": "be122594-3d56-4964-b4e6-6e58f0923143"
+        }
+      ]
+    },
+    "eventFullDetails": {
+      "scheduledEventId": "23",
+      "identity": "27288@Tihomirs-MBP",
+      "requestId": "be122594-3d56-4964-b4e6-6e58f0923143",
+      "attempt": 1,
+      "lastFailure": null,
+      "eventId": "24",
+      "eventType": "ActivityTaskStarted",
+      "kvps": [
+        {
+          "key": "scheduledEventId",
+          "value": "23"
+        },
+        {
+          "key": "identity",
+          "value": "27288@Tihomirs-MBP"
+        },
+        {
+          "key": "requestId",
+          "value": "be122594-3d56-4964-b4e6-6e58f0923143"
+        },
+        {
+          "key": "attempt",
+          "value": 1
+        }
+      ]
+    }
+  },
+  {
+    "eventTime": "2021-06-22T19:53:39.000Z",
+    "eventType": "ActivityTaskCompleted",
+    "eventId": "25",
+    "details": {
+      "result": {
+        "payloads": [
+          "yes"
+        ]
+      },
+      "scheduledEventId": "23",
+      "startedEventId": "24",
+      "identity": "27288@Tihomirs-MBP",
+      "eventId": "25",
+      "eventType": "ActivityTaskCompleted",
+      "kvps": [
+        {
+          "key": "eventTime",
+          "value": "Jun 22nd 3:53:39 pm"
+        },
+        {
+          "key": "eventId",
+          "value": "25"
+        },
+        {
+          "key": "result",
+          "value": [
+            "yes"
+          ]
+        },
+        {
+          "key": "scheduledEventId",
+          "value": "23"
+        },
+        {
+          "key": "startedEventId",
+          "value": "24"
+        },
+        {
+          "key": "identity",
+          "value": "27288@Tihomirs-MBP"
+        }
+      ],
+      "eventTime": "Jun 22nd 3:53:39 pm"
+    },
+    "eventTimeDisplay": "Jun 22nd 3:53:39 pm",
+    "timeElapsedDisplay": "20s (+5s)",
+    "eventSummary": {
+      "result": {
+        "payloads": [
+          "yes"
+        ]
+      },
+      "eventId": "25",
+      "eventType": "ActivityTaskCompleted",
+      "kvps": [
+        {
+          "key": "result",
+          "value": [
+            "yes"
+          ]
+        }
+      ]
+    },
+    "eventFullDetails": {
+      "result": {
+        "payloads": [
+          "yes"
+        ]
+      },
+      "scheduledEventId": "23",
+      "startedEventId": "24",
+      "identity": "27288@Tihomirs-MBP",
+      "eventId": "25",
+      "eventType": "ActivityTaskCompleted",
+      "kvps": [
+        {
+          "key": "result",
+          "value": [
+            "yes"
+          ]
+        },
+        {
+          "key": "scheduledEventId",
+          "value": "23"
+        },
+        {
+          "key": "startedEventId",
+          "value": "24"
+        },
+        {
+          "key": "identity",
+          "value": "27288@Tihomirs-MBP"
+        }
+      ]
+    }
+  },
+  {
+    "eventTime": "2021-06-22T19:53:39.000Z",
+    "eventType": "WorkflowTaskScheduled",
+    "eventId": "26",
+    "details": {
+      "taskQueue": {
+        "name": "27288@Tihomirs-MBP:adb5d5ab-5481-4f39-be68-45feac62b9e3",
+        "kind": "Sticky"
+      },
+      "startToCloseTimeout": {
+        "duration": 10
+      },
+      "attempt": 1,
+      "eventId": "26",
+      "eventType": "WorkflowTaskScheduled",
+      "kvps": [
+        {
+          "key": "eventTime",
+          "value": "Jun 22nd 3:53:39 pm"
+        },
+        {
+          "key": "eventId",
+          "value": "26"
+        },
+        {
+          "key": "taskQueue.name",
+          "routeLink": {
+            "name": "task-queue",
+            "params": {
+              "taskQueue": "27288@Tihomirs-MBP:adb5d5ab-5481-4f39-be68-45feac62b9e3"
+            }
+          },
+          "value": "27288@Tihomirs-MBP:adb5d5ab-5481-4f39-be68-45feac62b9e3"
+        },
+        {
+          "key": "taskQueue.kind",
+          "value": "Sticky"
+        },
+        {
+          "key": "startToCloseTimeout",
+          "value": "10s"
+        },
+        {
+          "key": "attempt",
+          "value": 1
+        }
+      ],
+      "eventTime": "Jun 22nd 3:53:39 pm"
+    },
+    "eventTimeDisplay": "Jun 22nd 3:53:39 pm",
+    "timeElapsedDisplay": "20s",
+    "eventSummary": {
+      "Taskqueue": "27288@Tihomirs-MBP:adb5d5ab-5481-4f39-be68-45feac62b9e3",
+      "Timeout": "10s",
+      "eventId": "26",
+      "eventType": "WorkflowTaskScheduled",
+      "kvps": [
+        {
+          "key": "Taskqueue",
+          "routeLink": {
+            "name": "task-queue",
+            "params": {
+              "taskQueue": "27288@Tihomirs-MBP:adb5d5ab-5481-4f39-be68-45feac62b9e3"
+            }
+          },
+          "value": "27288@Tihomirs-MBP:adb5d5ab-5481-4f39-be68-45feac62b9e3"
+        },
+        {
+          "key": "Timeout",
+          "value": "10s"
+        }
+      ]
+    },
+    "eventFullDetails": {
+      "taskQueue": {
+        "name": "27288@Tihomirs-MBP:adb5d5ab-5481-4f39-be68-45feac62b9e3",
+        "kind": "Sticky"
+      },
+      "startToCloseTimeout": {
+        "duration": 10
+      },
+      "attempt": 1,
+      "eventId": "26",
+      "eventType": "WorkflowTaskScheduled",
+      "kvps": [
+        {
+          "key": "taskQueue.name",
+          "routeLink": {
+            "name": "task-queue",
+            "params": {
+              "taskQueue": "27288@Tihomirs-MBP:adb5d5ab-5481-4f39-be68-45feac62b9e3"
+            }
+          },
+          "value": "27288@Tihomirs-MBP:adb5d5ab-5481-4f39-be68-45feac62b9e3"
+        },
+        {
+          "key": "taskQueue.kind",
+          "value": "Sticky"
+        },
+        {
+          "key": "startToCloseTimeout",
+          "value": "10s"
+        },
+        {
+          "key": "attempt",
+          "value": 1
+        }
+      ]
+    }
+  },
+  {
+    "eventTime": "2021-06-22T19:53:39.000Z",
+    "eventType": "WorkflowTaskStarted",
+    "eventId": "27",
+    "details": {
+      "scheduledEventId": "26",
+      "identity": "adb5d5ab-5481-4f39-be68-45feac62b9e3",
+      "requestId": "24c9321a-11bd-42df-a2a6-4f6eecb37753",
+      "eventId": "27",
+      "eventType": "WorkflowTaskStarted",
+      "kvps": [
+        {
+          "key": "eventTime",
+          "value": "Jun 22nd 3:53:39 pm"
+        },
+        {
+          "key": "eventId",
+          "value": "27"
+        },
+        {
+          "key": "scheduledEventId",
+          "value": "26"
+        },
+        {
+          "key": "identity",
+          "value": "adb5d5ab-5481-4f39-be68-45feac62b9e3"
+        },
+        {
+          "key": "requestId",
+          "value": "24c9321a-11bd-42df-a2a6-4f6eecb37753"
+        }
+      ],
+      "eventTime": "Jun 22nd 3:53:39 pm"
+    },
+    "eventTimeDisplay": "Jun 22nd 3:53:39 pm",
+    "timeElapsedDisplay": "20s",
+    "eventSummary": {
+      "requestId": "24c9321a-11bd-42df-a2a6-4f6eecb37753",
+      "eventId": "27",
+      "eventType": "WorkflowTaskStarted",
+      "kvps": [
+        {
+          "key": "requestId",
+          "value": "24c9321a-11bd-42df-a2a6-4f6eecb37753"
+        }
+      ]
+    },
+    "eventFullDetails": {
+      "scheduledEventId": "26",
+      "identity": "adb5d5ab-5481-4f39-be68-45feac62b9e3",
+      "requestId": "24c9321a-11bd-42df-a2a6-4f6eecb37753",
+      "eventId": "27",
+      "eventType": "WorkflowTaskStarted",
+      "kvps": [
+        {
+          "key": "scheduledEventId",
+          "value": "26"
+        },
+        {
+          "key": "identity",
+          "value": "adb5d5ab-5481-4f39-be68-45feac62b9e3"
+        },
+        {
+          "key": "requestId",
+          "value": "24c9321a-11bd-42df-a2a6-4f6eecb37753"
+        }
+      ]
+    }
+  },
+  {
+    "eventTime": "2021-06-22T19:53:39.000Z",
+    "eventType": "WorkflowTaskCompleted",
+    "eventId": "28",
+    "details": {
+      "scheduledEventId": "26",
+      "startedEventId": "27",
+      "identity": "27288@Tihomirs-MBP",
+      "binaryChecksum": "",
+      "eventId": "28",
+      "eventType": "WorkflowTaskCompleted",
+      "kvps": [
+        {
+          "key": "eventTime",
+          "value": "Jun 22nd 3:53:39 pm"
+        },
+        {
+          "key": "eventId",
+          "value": "28"
+        },
+        {
+          "key": "scheduledEventId",
+          "value": "26"
+        },
+        {
+          "key": "startedEventId",
+          "value": "27"
+        },
+        {
+          "key": "identity",
+          "value": "27288@Tihomirs-MBP"
+        },
+        {
+          "key": "binaryChecksum",
+          "value": ""
+        }
+      ],
+      "eventTime": "Jun 22nd 3:53:39 pm"
+    },
+    "eventTimeDisplay": "Jun 22nd 3:53:39 pm",
+    "timeElapsedDisplay": "20s",
+    "eventSummary": {
+      "identity": "27288@Tihomirs-MBP",
+      "eventId": "28",
+      "eventType": "WorkflowTaskCompleted",
+      "kvps": [
+        {
+          "key": "identity",
+          "value": "27288@Tihomirs-MBP"
+        }
+      ]
+    },
+    "eventFullDetails": {
+      "scheduledEventId": "26",
+      "startedEventId": "27",
+      "identity": "27288@Tihomirs-MBP",
+      "binaryChecksum": "",
+      "eventId": "28",
+      "eventType": "WorkflowTaskCompleted",
+      "kvps": [
+        {
+          "key": "scheduledEventId",
+          "value": "26"
+        },
+        {
+          "key": "startedEventId",
+          "value": "27"
+        },
+        {
+          "key": "identity",
+          "value": "27288@Tihomirs-MBP"
+        },
+        {
+          "key": "binaryChecksum",
+          "value": ""
+        }
+      ]
+    }
+  },
+  {
+    "eventTime": "2021-06-22T19:53:39.000Z",
+    "eventType": "WorkflowExecutionCompleted",
+    "eventId": "29",
+    "details": {
+      "result": {
+        "payloads": [
+          "{id:80vo2g,name:asdasd,age:,zip:asdasd,insurance: ,insuranceId: ,condition:asdasd,hospital:{name:Local Hospital,address:123 Local Street,phone:555-55-5555,zip:12345},doctor:{name:Michael Scott,img:img/docfemale.png,specialty:General},onboarded:yes,phone:asdasd,email:asdasd,contactMethod:PHONE}"
+        ]
+      },
+      "workflowTaskCompletedEventId": "28",
+      "eventId": "29",
+      "eventType": "WorkflowExecutionCompleted",
+      "kvps": [
+        {
+          "key": "eventTime",
+          "value": "Jun 22nd 3:53:39 pm"
+        },
+        {
+          "key": "eventId",
+          "value": "29"
+        },
+        {
+          "key": "result",
+          "value": [
+            "{id:80vo2g,name:asdasd,age:,zip:asdasd,insurance: ,insuranceId: ,condition:asdasd,hospital:{name:Local Hospital,address:123 Local Street,phone:555-55-5555,zip:12345},doctor:{name:Michael Scott,img:img/docfemale.png,specialty:General},onboarded:yes,phone:asdasd,email:asdasd,contactMethod:PHONE}"
+          ]
+        },
+        {
+          "key": "workflowTaskCompletedEventId",
+          "value": "28"
+        }
+      ],
+      "eventTime": "Jun 22nd 3:53:39 pm"
+    },
+    "eventTimeDisplay": "Jun 22nd 3:53:39 pm",
+    "timeElapsedDisplay": "20s",
+    "eventSummary": {
+      "result": {
+        "payloads": [
+          "{id:80vo2g,name:asdasd,age:,zip:asdasd,insurance: ,insuranceId: ,condition:asdasd,hospital:{name:Local Hospital,address:123 Local Street,phone:555-55-5555,zip:12345},doctor:{name:Michael Scott,img:img/docfemale.png,specialty:General},onboarded:yes,phone:asdasd,email:asdasd,contactMethod:PHONE}"
+        ]
+      },
+      "workflowTaskCompletedEventId": "28",
+      "eventId": "29",
+      "eventType": "WorkflowExecutionCompleted",
+      "kvps": [
+        {
+          "key": "result",
+          "value": [
+            "{id:80vo2g,name:asdasd,age:,zip:asdasd,insurance: ,insuranceId: ,condition:asdasd,hospital:{name:Local Hospital,address:123 Local Street,phone:555-55-5555,zip:12345},doctor:{name:Michael Scott,img:img/docfemale.png,specialty:General},onboarded:yes,phone:asdasd,email:asdasd,contactMethod:PHONE}"
+          ]
+        },
+        {
+          "key": "workflowTaskCompletedEventId",
+          "value": "28"
+        }
+      ]
+    },
+    "eventFullDetails": {
+      "result": {
+        "payloads": [
+          "{id:80vo2g,name:asdasd,age:,zip:asdasd,insurance: ,insuranceId: ,condition:asdasd,hospital:{name:Local Hospital,address:123 Local Street,phone:555-55-5555,zip:12345},doctor:{name:Michael Scott,img:img/docfemale.png,specialty:General},onboarded:yes,phone:asdasd,email:asdasd,contactMethod:PHONE}"
+        ]
+      },
+      "workflowTaskCompletedEventId": "28",
+      "eventId": "29",
+      "eventType": "WorkflowExecutionCompleted",
+      "kvps": [
+        {
+          "key": "result",
+          "value": [
+            "{id:80vo2g,name:asdasd,age:,zip:asdasd,insurance: ,insuranceId: ,condition:asdasd,hospital:{name:Local Hospital,address:123 Local Street,phone:555-55-5555,zip:12345},doctor:{name:Michael Scott,img:img/docfemale.png,specialty:General},onboarded:yes,phone:asdasd,email:asdasd,contactMethod:PHONE}"
+          ]
+        },
+        {
+          "key": "workflowTaskCompletedEventId",
+          "value": "28"
+        }
+      ]
+    }
+  }
+]

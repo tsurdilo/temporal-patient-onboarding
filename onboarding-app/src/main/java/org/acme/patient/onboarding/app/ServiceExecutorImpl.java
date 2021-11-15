@@ -51,14 +51,6 @@ public class ServiceExecutorImpl implements ServiceExecutor {
         return "yes";
     }
 
-    @Override
-    public Patient compensateOnboarding(Patient patient) {
-        patient.setOnboarded("no");
-        // simulate some work...
-        sleep(5);
-        return patient;
-    }
-
     private void sleep(int seconds) {
         try {
             Thread.sleep(seconds * 1000);
