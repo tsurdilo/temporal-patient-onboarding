@@ -39,7 +39,16 @@ git clone https://github.com/tsurdilo/temporal-patient-onboarding.git
 cd temporal-patient-onboarding
 ```
 
-3. Start the demo apps:
+3. Build the model:
+
+Build `onboarding-model`:
+
+```shell script
+cd onboarding-model
+mvn clean install
+```
+
+4. Start the demo apps:
 
 Start `onboarding-services`:
 
@@ -55,13 +64,13 @@ cd onboarding-app
 mvn clean install quarkus:dev
 ```
 
-4. Access the demo services Swagger UI via: [http://localhost:8090/q/swagger-ui/](http://localhost:8090/q/swagger-ui/)
+5. Access the demo services Swagger UI via: [http://localhost:8090/q/swagger-ui/](http://localhost:8090/q/swagger-ui/)
 
-5. Acess the demo app Swagger UI via: [http://localhost:8080/q/swagger-ui/](http://localhost:8080/q/swagger-ui/)
+6. Acess the demo app Swagger UI via: [http://localhost:8080/q/swagger-ui/](http://localhost:8080/q/swagger-ui/)
 
-6. Access the demo UI in browser via: [http://localhost:8080](http://localhost:8080)
+7. Access the demo UI in browser via: [http://localhost:8080](http://localhost:8080)
 
-7. Access the Temporal Web-Ui via: [http://localhost:8088](http://localhost:8088)
+8. Access the Temporal Web-Ui via: [http://localhost:8088](http://localhost:8088)
 
 ## Interacting with the demo
 
