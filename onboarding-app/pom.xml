@@ -17,7 +17,7 @@
         <quarkus.platform.version>2.4.1.Final</quarkus.platform.version>
         <surefire-plugin.version>3.0.0-M5</surefire-plugin.version>
 
-        <version.temporal.sdk>1.5.0</version.temporal.sdk>
+        <version.temporal.sdk>1.8.1</version.temporal.sdk>
         <version.serverlessworkflow.sdk>3.0.0.Final</version.serverlessworkflow.sdk>
         <version.json.path>2.6.0</version.json.path>
         <version.asyncapi>1.0.0-EAP</version.asyncapi>
