@@ -18,7 +18,7 @@ It's main purpose is to:
 
 The demo is composed of three modules:
 1. The `onboarding-app` module is our app that runs the workflow and its activities. It also includes our onboarding UI.
-2. The `onboarding-services` module contains our services which the workflow activities are accessing. It is used to show
+2. The `onboarding-service` module contains our services which the workflow activities are accessing. It is used to show
 workflow retries and compensation in cases of failures.
 3. The `onboarding-model` contains our domain model
 
@@ -48,10 +48,10 @@ mvn clean install
 
 4. Start the demo apps:
 
-Start `onboarding-services`:
+Start `onboarding-service`:
 
 ```shell script
-cd onboarding-services
+cd onboarding-service
 mvn clean install quarkus:dev
 ```
 
@@ -62,7 +62,7 @@ cd onboarding-app
 mvn clean install quarkus:dev
 ```
 
-5. Access the demo services Swagger UI via: [http://localhost:8090/q/swagger-ui/](http://localhost:8090/q/swagger-ui/)
+5. Access the demo service Swagger UI via: [http://localhost:8090/q/swagger-ui/](http://localhost:8090/q/swagger-ui/)
 
 6. Acess the demo app Swagger UI via: [http://localhost:8080/q/swagger-ui/](http://localhost:8080/q/swagger-ui/)
 
@@ -134,22 +134,22 @@ You can click on the Run Id link and explore the workflow execution history.
 
 ## 2. Simulating Services failure - Retries
 
-For this scenario shut down `onboarding-services` so it is not running.
+For this scenario shut down `onboarding-service` so it is not running.
 Start onboarding another patient through the UI and submit the form.
 
 Look at the logs of `onboarding-app`, you will see that Temporal is retrying the first activity which is failing
 because of an exception.
 
-After about 5 seconds bring up `onboarding-services` again and watch the UI. 
+After about 5 seconds bring up `onboarding-service` again and watch the UI. 
 You will see that workflow retries were successfull and you will start seeing the onboarding 
 popup messages and that the patient was successfully onboarded.
 
 ## 3. Simulating Services failure - Compensation
 
-For this scenario shut down `onboarding-services` so it is not running. 
+For this scenario shut down `onboarding-service` so it is not running. 
 Start onboarding another patient through the UI and submit the form.
 
-This time do not bring `onboarding-services` and wait until our retries finish (we set the max retries to 6 in our workflow).
+This time do not bring `onboarding-service` and wait until our retries finish (we set the max retries to 6 in our workflow).
 Watch the UI, as after all the retries have been performed you will see a notification popul telling you
 that the patient was not onboarded. 
 
