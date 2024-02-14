@@ -24,12 +24,10 @@ workflow retries and compensation in cases of failures.
 
 ## Running the demo
 
-1. Start the Temporal Service (docker compose):
+1. Start the Temporal Service using [temporal](https://docs.temporal.io/cli) CLI:
 
 ```shell script
- git clone https://github.com/temporalio/docker-compose.git
- cd  docker-compose
- docker-compose up
+temporal server start-dev
 ```
 
 2. Clone the repository locally:
@@ -64,17 +62,17 @@ mvn clean install quarkus:dev
 
 5. Access the demo service Swagger UI via: [http://localhost:8090/q/swagger-ui/](http://localhost:8090/q/swagger-ui/)
 
-6. Acess the demo app Swagger UI via: [http://localhost:8080/q/swagger-ui/](http://localhost:8080/q/swagger-ui/)
+6. Access the demo app Swagger UI via: [http://localhost:8080/q/swagger-ui/](http://localhost:8080/q/swagger-ui/)
 
 7. Access the demo UI in browser via: [http://localhost:8080](http://localhost:8080)
 
-8. Access the Temporal Web-Ui via: [http://localhost:8088](http://localhost:8088)
+8. Access the Temporal Web-Ui via: [http://localhost:8233](http://localhost:8233)
 
 ## Interacting with the demo
 
 ## 1. Running without failures
 
-Our demo has a simple UI that intially looks like this:
+Our demo has a simple UI that initially looks like this:
 
 <p align="center">
 <img src="img/initial-screen.png" height="400px"/>
@@ -85,11 +83,11 @@ You can type in the new patient information and here are some useful hints:
 Our demo workflow activities will associate the zip code you type in with one of the 
 pre-defined hospitals. To get a specific hospital you can use the following zips:
 `30041`, `55902`, `90095`, `90048`, `10065`. You can type in any zip you wish but if it's not one 
-of those our workflow activities will associate it with the "default" hospital.
+of those the workflow activities will associate it with the "default" hospital.
 
 There is a number of conditions which you can use to associate the patient with 
 one of the pre-defined doctors in the demo. These are:
-`Diabetes`, `Anxiety`, `Cancer`, `Asthma`. you can type in any condition you wish but if it's not one of theose
+`Diabetes`, `Anxiety`, `Cancer`, `Asthma`. you can type in any condition you wish but if it's not one of those
 the workflow activities will associate it with the "default" doctor.
 
 Once you fill in the new patient form click the "Onboard Patient" button.
@@ -113,10 +111,10 @@ When each activity executes, you will see a notification popup of the activity, 
 
 These notifications are pushed from our workflow activities.
 There is no need to click on the notifications "OK" button. These notifications
-will automatically close when the assiciated workflow activitiy has completed
-and will dissapear when the workflow run completes.
+will automatically close when the associated workflow activity has completed
+and will disappear when the workflow run completes.
 
-After the workflow run completes, the section of bottom of the scren will update to show you
+After the workflow run completes, the section of bottom of the screen will update to show you
 that the patient is indeed onboarded:
 
 <p align="center">
@@ -141,7 +139,7 @@ Look at the logs of `onboarding-app`, you will see that Temporal is retrying the
 because of an exception.
 
 After about 5 seconds bring up `onboarding-service` again and watch the UI. 
-You will see that workflow retries were successfull and you will start seeing the onboarding 
+You will see that workflow retries were successful, and you will start seeing the onboarding 
 popup messages and that the patient was successfully onboarded.
 
 ## 3. Simulating Services failure - Compensation
@@ -150,7 +148,7 @@ For this scenario shut down `onboarding-service` so it is not running.
 Start onboarding another patient through the UI and submit the form.
 
 This time do not bring `onboarding-service` and wait until our retries finish (we set the max retries to 6 in our workflow).
-Watch the UI, as after all the retries have been performed you will see a notification popul telling you
+Watch the UI, as after all the retries have been performed you will see a notification popup telling you
 that the patient was not onboarded. 
 
 Now look at the logs of `onboarding-app`, you will see that right after the defined retries, our workflow has 
@@ -169,7 +167,7 @@ popup, depending where during the workflow execution you shut down the service.
 
 Now start the Temporal service back up. When it comes back up watch the application UI
 and the Temporal Web UI. You will see that Temporal has recovered our workflow, has replayed it 
-to the point of failure (where we shut down the Temporal service) and is contuing its 
+to the point of failure (where we shut down the Temporal service) and is continuing its 
 execution at that point. 
 
 In the Temporal UI you should see that our onboarding workflow is back to the "Running" status
